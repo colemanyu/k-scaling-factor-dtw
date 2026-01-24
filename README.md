@@ -62,8 +62,8 @@ conda env create --name envname --file=environments.yml
 - Figure 7: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/data_processing.ipynb) -->
 
 # Notifications
-Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
-- 2025-08-29: Submitted to [IEEE BigData 2025](https://conferences.cis.um.edu.mo/ieeebigdata2025/).
+<!-- Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
+- 2025-08-29: Submitted to [IEEE BigData 2025](https://conferences.cis.um.edu.mo/ieeebigdata2025/). -->
 
 ## Run the scripts in tmux to allow multiple runnings
 Create a tmux session
