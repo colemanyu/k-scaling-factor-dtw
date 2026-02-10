@@ -1,9 +1,11 @@
-# Scaling with Multiple Scaling Factors and Dynamic Time Warping in Time Series Searching
+# Scaling with Multiple Scaling Factors in Time Series Searching
 
-![PSDTW intution](figures/psdtw-intuition.pptx.svg)
-- The above figure shows the intuition of the necessity of our novel distance measure PSDTW.
+<img src="figures/psdtw-intuition.pptx.svg" alt="Intuition of PSD." width="400">
 
-# Install
+- It shows the intuition of the necessity of our novel distance measure PSD (Piecewise Scaling Distance).
+
+## Installation
+
 ```
 conda create -n ksfdtw python=3.12
 conda activate ksfdtw
@@ -27,11 +29,11 @@ conda env remove -n ksfdtw
 conda env create --name envname --file=environments.yml
 ```
 
+## Project Structure
 
-# Project Structure
 - Data Preparation: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
 - Query Experiment: [querying.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
-- Important folders and files in this repository are listed as belows:
+
   <!-- ```bash
   .
   ├── code
@@ -61,10 +63,6 @@ conda env create --name envname --file=environments.yml
 - Figure 6: [class_representative_fig.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/class_representative_fig.ipynb)
 - Figure 7: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/data_processing.ipynb) -->
 
-# Notifications
-<!-- Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
-- 2025-08-29: Submitted to [IEEE BigData 2025](https://conferences.cis.um.edu.mo/ieeebigdata2025/). -->
-
 ## Run the scripts in tmux to allow multiple runnings
 Create a tmux session
 ```
@@ -93,13 +91,13 @@ $ tmux kill-session -t <session-name>
 $ tmux kill-server
 ```
 ### References
+
 - [A beginner's guide to tmux](https://www.redhat.com/en/blog/introduction-tmux-linux)
 - [Tmux 使用教程](https://www.ruanyifeng.com/blog/2019/10/tmux.html) (In Chinese)
 
-# Corresponding Paper
-- It will be updated after paper acceptance.
 
-# Related Resources
+## Resources
+
 1. [aeon](https://www.aeon-toolkit.org/en/stable/index.html)
     - [Distances - aeon 1.2.0 documentation](https://www.aeon-toolkit.org/en/stable/api_reference/distances.html)
     - [dtw_distance - aeon 1.2.0 documentation](https://www.aeon-toolkit.org/en/stable/api_reference/auto_generated/aeon.distances.dtw_distance.html)
@@ -117,13 +115,3 @@ $ tmux kill-server
     - [Python implementation](https://github.com/slaypni/fastdtw)
 1. [dtw-python · PyPI](https://pypi.org/project/dtw-python/)
 1. [dtw · PyPI](https://pypi.org/project/dtw/)
-    
-# Contacts
-- It will be updated after paper acceptance.
-
-
-
-
-
-
-
