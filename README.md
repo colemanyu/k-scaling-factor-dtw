@@ -35,7 +35,7 @@ conda env export > environment.yml
 conda env create --name envname --file=environments.yml
 ```
 
-## Project Structure
+<!-- ## Project Structure -->
 
 <!-- - Data Preparation: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
 - Query Experiment: [querying.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb) -->
