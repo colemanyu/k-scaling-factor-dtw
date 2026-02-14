@@ -19,12 +19,18 @@ pip install pyts
 conda install -c conda-forge sktime  
 conda install -c conda-forge aeon
 conda install h5py
-# Export your active environment to a new file:
-conda env export > environment.yml
+
 # Deactivate the environment
 conda deactivate
+
 # Delete the environment if needed.
 conda env remove -n ksfdtw
+```
+
+Other useful commands
+```
+# Export your active environment to a new file
+conda env export > environment.yml
 
 # Or readers can make a new environment from our environment. 
 # But different platforms may have their own platform-specific packages that may cause error if importing `environments.yml` directly.
@@ -33,8 +39,8 @@ conda env create --name envname --file=environments.yml
 
 ## Project Structure
 
-- Data Preparation: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
-- Query Experiment: [querying.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
+<!-- - Data Preparation: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb)
+- Query Experiment: [querying.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/02_searching.ipynb) -->
 
   <!-- ```bash
   .

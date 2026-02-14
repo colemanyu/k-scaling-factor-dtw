@@ -12,7 +12,7 @@
         Bus:	Built-In
         Total Number of Cores:	14
     ```
-- lgpu2.cse.ust.hk (remote machine) [More info](https://cssystem.cse.ust.hk/Facilities/intelx64linux_gpu.html)
+- lgpu2 (remote machine)
     ```
     CPU: Intel Xeon Gold 6326
     Memory: 256GB RAM
