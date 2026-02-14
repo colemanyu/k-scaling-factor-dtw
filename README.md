@@ -1,5 +1,3 @@
-Test on remote
-
 # Scaling with Multiple Scaling Factors in Time Series Searching
 
 <img src="figures/psdtw-intuition.pptx.svg" alt="Intuition of PSD." width="400">
@@ -64,12 +62,17 @@ conda env create --name envname --file=environments.yml
   └── results
   ``` -->
 
-<!-- ## Figures/Tables in the Paper
-- Figures 1, 4: [main.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/main.ipynb)
-- Figure 3: [dtw_bands_fig.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/dtw_bands_fig.ipynb)
-- Figure 5: [lb_keogh_vs_lb_shen_fig.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/lb_keogh_vs_lb_shen_fig.ipynb)
-- Figure 6: [class_representative_fig.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/class_representative_fig.ipynb)
-- Figure 7: [data_processing.ipynb](https://github.com/cyuab/k-scaling-factor-dtw/blob/main/code/data_processing.ipynb) -->
+## Corresponding Paper
+
+### Data/Code for the Figures/Tables
+
+Figures
+- Figures 1, 2, 4: [01_explore_distance_measures.ipynb](code/01_explore_distance_measures.ipynb)
+- Figure 5: [02_dtw_bands.ipynb](code/02_dtw_bands.ipynb)
+- Figure 6: [03_lb_keogh_vs_lb_shen.ipynb](code/03_lb_keogh_vs_lb_shen.ipynb)
+- Figure 8: [04_visualize_GunPoint.ipynb](code/04_visualize_GunPoint.ipynb)
+- Figure 9: [06_searching.ipynb](code/06_searching.ipynb)
+- Figure 10: [07_plot_runtime.ipynb](code/07_plot_runtime.ipynb)
 
 ## Run the scripts in tmux to allow multiple runnings
 Create a tmux session
