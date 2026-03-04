@@ -28,6 +28,8 @@ do
   tmux new-session -d -s "$session_name"
   
   # Send commands to the session
+  tmux send-keys -t "$session_name" "bash" C-m
+
   # 1. Activate the conda environment
   tmux send-keys -t "$session_name" "conda activate ksfdtw" C-m
   
