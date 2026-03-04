@@ -90,6 +90,8 @@ $ python 02_searching1.py
 # Detach from tmux session
 # https://superuser.com/questions/249659/how-to-detach-a-tmux-session-that-itself-already-in-a-tmux
 Press Ctrl+B then D
+$ python 06_searching_pairwise.py SonyAIBORobotSurface1
+# chmod +x <filename>
 ```
 Manage tmux sessions
 ```
