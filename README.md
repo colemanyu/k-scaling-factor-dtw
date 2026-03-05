@@ -92,6 +92,7 @@ $ python 02_searching1.py
 Press Ctrl+B then D
 $ python 06_searching_pairwise.py SonyAIBORobotSurface1
 # chmod +x <filename>
+$ ./code/06_run_all_tmux.sh
 ```
 Manage tmux sessions
 ```
