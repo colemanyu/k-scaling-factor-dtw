@@ -1,0 +1,120 @@
+Running searching speedup for dataset: SonyAIBORobotSurface1
+0.05 & 0.51 & 0.61 & 0.45 & 0.20 & 0.44 & 0.51 & Starting nearest neighbor search over the entire query set...
+SonyAIBORobotSurface1
+
+0.67 & 
+Elapsed time: 64.88928198814392
+Average Elapsed time: 0.10449159740441855
+Total distance measure calls: 330731045
+This notebook was last run end-to-end on: 2026-03-12 10:12:38.061897
+
+Finished SonyAIBORobotSurface1
+----------------------------------------
+Running searching speedup for dataset: ECG200
+0.07 & 0.65 & 0.77 & 0.52 & 0.56 & 0.50 & 0.66 & Starting nearest neighbor search over the entire query set...
+ECG200
+
+0.79 & 
+Elapsed time: 9.802114725112915
+Average Elapsed time: 0.049010573625564574
+Total distance measure calls: 88185752
+This notebook was last run end-to-end on: 2026-03-12 10:13:18.556091
+
+Finished ECG200
+----------------------------------------
+Running searching speedup for dataset: MedicalImages
+0.06 & 0.52 & 0.62 & 0.39 & 0.50 & 0.38 & 0.51 & Starting nearest neighbor search over the entire query set...
+MedicalImages
+
+0.68 & 
+Elapsed time: 280.8180549144745
+Average Elapsed time: 0.2461157361213624
+Total distance measure calls: 1693774153
+This notebook was last run end-to-end on: 2026-03-12 10:26:29.598820
+
+Finished MedicalImages
+----------------------------------------
+Running searching speedup for dataset: CBF
+0.09 & 0.55 & 0.63 & 0.40 & 0.31 & 0.40 & 0.55 & Starting nearest neighbor search over the entire query set...
+CBF
+
+0.70 & 
+Elapsed time: 639.847371339798
+Average Elapsed time: 0.6880079261718258
+Total distance measure calls: 15516200617
+This notebook was last run end-to-end on: 2026-03-12 10:45:32.065086
+
+Finished CBF
+----------------------------------------
+Running searching speedup for dataset: SwedishLeaf
+0.05 & 0.73 & 0.76 & 0.58 & 0.68 & 0.59 & 0.74 & Starting nearest neighbor search over the entire query set...
+SwedishLeaf
+
+0.95 & 
+Elapsed time: 447.1713411808014
+Average Elapsed time: 0.3974856366051568
+Total distance measure calls: 4936428270
+This notebook was last run end-to-end on: 2026-03-12 11:05:10.905698
+
+Finished SwedishLeaf
+----------------------------------------
+Running searching speedup for dataset: Plane
+0.07 & 0.38 & 0.40 & 0.24 & 0.46 & 0.24 & 0.37 & Starting nearest neighbor search over the entire query set...
+Plane
+
+0.68 & 
+Elapsed time: 19.13175392150879
+Average Elapsed time: 0.0911035901024228
+Total distance measure calls: 221091714
+This notebook was last run end-to-end on: 2026-03-12 11:06:16.678626
+
+Finished Plane
+----------------------------------------
+Running searching speedup for dataset: PowerCons
+0.15 & 0.61 & 0.63 & 0.59 & 0.61 & 0.59 & 0.61 & Starting nearest neighbor search over the entire query set...
+PowerCons
+
+0.64 & 
+Elapsed time: 129.05738759040833
+Average Elapsed time: 0.3584927433066898
+Total distance measure calls: 3120319053
+This notebook was last run end-to-end on: 2026-03-12 11:10:12.299533
+
+Finished PowerCons
+----------------------------------------
+Running searching speedup for dataset: GunPoint
+0.06 & 0.59 & 0.23 & 0.53 & 0.67 & 0.54 & 0.61 & Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 21.707497119903564
+Average Elapsed time: 0.10853748559951783
+Total distance measure calls: 324546261
+This notebook was last run end-to-end on: 2026-03-12 11:11:20.543137
+
+Finished GunPoint
+----------------------------------------
+Running searching speedup for dataset: Adiac
+0.01 & 0.34 & 0.09 & 0.28 & 0.25 & 0.27 & 0.34 & Starting nearest neighbor search over the entire query set...
+Adiac
+
+0.53 & 
+Elapsed time: 416.5892434120178
+Average Elapsed time: 0.5334049211421483
+Total distance measure calls: 6400900770
+This notebook was last run end-to-end on: 2026-03-12 11:28:23.526492
+
+Finished Adiac
+----------------------------------------
+Running searching speedup for dataset: Epilepsy
+0.16 & 0.71 & 0.76 & 0.60 & 0.37 & 0.54 & 0.66 & Starting nearest neighbor search over the entire query set...
+Epilepsy
+
+0.82 & 
+Elapsed time: 1112.707993030548
+Average Elapsed time: 4.046210883747448
+Total distance measure calls: 39989994148
+This notebook was last run end-to-end on: 2026-03-12 11:48:51.015512
+
+Finished Epilepsy
+----------------------------------------

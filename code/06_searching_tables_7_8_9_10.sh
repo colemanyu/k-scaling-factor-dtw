@@ -17,6 +17,7 @@ datasets=(
 # Iterate over each dataset and run the script
 for dataset in "${datasets[@]}"; do
     echo "Running searching speedup for dataset: $dataset"
+    # python 06_searching_tables_7_8_9.py "$dataset"
     python 06_searching_table_10.py "$dataset"
     echo "Finished $dataset"
     echo "----------------------------------------"
