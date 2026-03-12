@@ -131,3 +131,6 @@ $ tmux kill-server
 1. [dtw · PyPI](https://pypi.org/project/dtw/)
 
 
+```
+    zip -r filename.zip folder_name
+```
