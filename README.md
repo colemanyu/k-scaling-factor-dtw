@@ -142,4 +142,15 @@ Type this exactly:
 capture-pane -S - ; save-buffer my_history.txt
 
 Press Enter.
+
+# dataset=CBF, P=4, l=2.0, dist_method=1 (DTW)
+python 06_searching_table_3_psed_table_4.py CBF 4 2.0 1
+
+# dataset=ECG200, P=3 (defaults: l=1.50, dist_method=0)
+python 06_searching_table_3_psed_table_4.py ECG200 3
+
+python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 0
+
+python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 1
+
 ```
