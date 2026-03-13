@@ -134,23 +134,23 @@ $ tmux kill-server
 ```
     zip -r outputs.zip outputs
     Option 1: Save everything that ALREADY happened
-Use this if you just finished a long process and realize, "I need to save those results to a file."
+    Use this if you just finished a long process and realize, "I need to save those results to a file."
 
-Press your Prefix (Ctrl + b) then :.
+    Press your Prefix (Ctrl + b) then :.
 
-Type this exactly:
-capture-pane -S - ; save-buffer my_history.txt
+    Type this exactly:
+    capture-pane -S - ; save-buffer my_history.txt
 
-Press Enter.
+    Press Enter.
 
-# dataset=CBF, P=4, l=2.0, dist_method=1 (DTW)
-python 06_searching_table_3_psed_table_4.py CBF 4 2.0 1
+    # dataset=CBF, P=4, l=2.0, dist_method=1 (DTW)
+    python 06_searching_table_3_psed_table_4.py CBF 4 2.0 1
 
-# dataset=ECG200, P=3 (defaults: l=1.50, dist_method=0)
-python 06_searching_table_3_psed_table_4.py ECG200 3
+    # dataset=ECG200, P=3 (defaults: l=1.50, dist_method=0)
+    python 06_searching_table_3_psed_table_4.py ECG200 3
 
-python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 0
+    python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 0
 
-python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 1
+    python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 1
 
 ```
