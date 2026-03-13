@@ -132,5 +132,14 @@ $ tmux kill-server
 
 
 ```
-    zip -r filename.zip folder_name
+    zip -r outputs.zip outputs
+    Option 1: Save everything that ALREADY happened
+Use this if you just finished a long process and realize, "I need to save those results to a file."
+
+Press your Prefix (Ctrl + b) then :.
+
+Type this exactly:
+capture-pane -S - ; save-buffer my_history.txt
+
+Press Enter.
 ```
