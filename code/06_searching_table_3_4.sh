@@ -35,7 +35,12 @@ do
     # 3. Queue commands for each l value
     for l in "${ls[@]}"
     do
-        cmd="python 06_searching_table_3_4.py $dataset $P $l $method"
+        if [ "$method" -eq 1 ]; then
+            r=0.1
+        else
+            r=0.0
+        fi
+        cmd="python 06_searching_table_3_4.py $dataset $P $l $method $r"
         echo "  Queuing: $cmd"
         tmux send-keys -t "$session_name" "$cmd" C-m
     done

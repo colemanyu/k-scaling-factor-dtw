@@ -153,4 +153,12 @@ $ tmux kill-server
 
     python 06_searching_table_3_psed_table_4.py GunPoint 4 2.0 1
 
+    Datasets | Time Series Classification Website
+    https://www.timeseriesclassification.com/dataset.php
+
+    https://github.com/johnpaparrizos/GLB
+
+    https://github.com/lemire/lbimproved
+
+    python 06_searching_table_3_4.py GunPoint 3 1.50 0 0.1
 ```

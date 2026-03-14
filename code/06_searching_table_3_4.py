@@ -75,6 +75,11 @@ if len(sys.argv) > 4:
 else:
     dist_method = 0
 
+if len(sys.argv) > 5:
+    r = float(sys.argv[5])
+else:
+    r = 0.0
+
 # Target set
 data = np.load(
     f"../data_processed/{dataset_name}_P{P}_uniform.npz",
@@ -201,7 +206,7 @@ for dist_name, dist_func in dist_funcs.items():
 function_used = psdtw_prime_vanilla
 
 dist_func_pp = lambda Q, C: function_used(
-        Q, C, l=l, r=0.0, P=P, dist_method= dist_method
+        Q, C, l=l, r=r, P=P, dist_method= dist_method
     )
 dist_func_p = lambda Q, C: dist_func_pp(Q, C)
 
