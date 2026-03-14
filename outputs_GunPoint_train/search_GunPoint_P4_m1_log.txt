@@ -1,0 +1,43 @@
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.25 1
+0.34 & 0.50 & 0.70 & 0.86 & 0.68 & 0.88 & 0.60 & 0.78 & 0.70 & 0.90 & 0.64 & 0.80 & 0.70 & 0.86 & 0.86 & 0.94 &
+Elapsed time: 135.5750081539154
+Average Elapsed time: 2.711500163078308
+Total distance measure calls: 55807524
+Imported results from file:
+0.86 0.94 &
+Elapsed time: 135.5750081539154
+Total distance measure calls: 55807524.0
+0.74 & 0.88 & 0.86 & 0.94 & 0.78 & 0.80 & 0.80 & 0.92 & 0.78 & 0.82 & 0.74 & 0.88 & This notebook was last run end-to-end on: 2026-03-13 14:05:25.447239
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.50 1
+0.22 & 0.38 & 0.64 & 0.80 & 0.60 & 0.92 & 0.52 & 0.64 & 0.68 & 0.90 & 0.52 & 0.66 & 0.64 & 0.82 & 0.86 & 0.98 &
+Elapsed time: 1638.722428560257
+Average Elapsed time: 32.77444857120514
+Total distance measure calls: 633615865
+Imported results from file:
+0.86 0.98 &
+Elapsed time: 1638.722428560257
+Total distance measure calls: 633615865.0
+0.72 & 0.84 & 0.86 & 0.98 & 0.68 & 0.84 & 0.84 & 0.96 & 0.66 & 0.84 & 0.72 & 0.86 & This notebook was last run end-to-end on: 2026-03-13 14:32:57.963333
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.75 1
+0.16 & 0.30 & 0.72 & 0.92 & 0.56 & 0.80 & 0.60 & 0.78 & 0.56 & 0.80 & 0.56 & 0.80 & 0.70 & 0.88 & 0.92 & 1.00 &
+Elapsed time: 6489.723133325577
+Average Elapsed time: 129.79446266651155
+Total distance measure calls: 2219763530
+Imported results from file:
+0.92 1.00 &
+Elapsed time: 6489.723133325577
+Total distance measure calls: 2219763530.0
+0.74 & 0.96 & 0.92 & 1.00 & 0.54 & 0.90 & 0.90 & 1.00 & 0.56 & 0.88 & 0.74 & 0.96 & This notebook was last run end-to-end on: 2026-03-13 16:21:24.954036
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 2.00 1
+0.06 & 0.12 & 0.58 & 0.78 & 0.50 & 0.72 & 0.46 & 0.64 & 0.50 & 0.82 & 0.50 & 0.64 & 0.56 & 0.82 & 0.88 & 0.98 &
+Elapsed time: 18319.456497192383
+Average Elapsed time: 366.38912994384765
+Total distance measure calls: 5391012077
+Imported results from file:
+0.88 0.98 &
+Elapsed time: 18319.456497192383
+Total distance measure calls: 5391012077.0
+0.66 & 0.90 & 0.88 & 0.98 & 0.58 & 0.82 & 0.88 & 0.98 & 0.62 & 0.80 & 0.66 & 0.90 & This notebook was last run end-to-end on: 2026-03-13 21:27:10.878961

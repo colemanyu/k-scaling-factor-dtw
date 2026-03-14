@@ -1,0 +1,43 @@
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 2 1.25 0
+0.30 & 0.56 & 0.82 & 1.00 & 0.54 & 0.84 & 0.84 & 0.92 & 0.96 & 1.00 & 0.88 & 0.96 & 0.82 & 0.98 & 0.98 & 1.00 &
+Elapsed time: 12.476389408111572
+Average Elapsed time: 0.24952778816223145
+Total distance measure calls: 30741150
+Imported results from file:
+0.98 1.00 &
+Elapsed time: 12.476389408111572
+Total distance measure calls: 30741150.0
+0.86 & 1.00 & 0.98 & 1.00 & 0.72 & 0.92 & 0.98 & 1.00 & 0.74 & 0.96 & 0.86 & 1.00 & This notebook was last run end-to-end on: 2026-03-13 14:03:22.884849
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 2 1.50 0
+0.14 & 0.36 & 0.88 & 1.00 & 0.38 & 0.64 & 0.78 & 0.94 & 1.00 & 1.00 & 0.80 & 0.92 & 0.88 & 0.96 & 1.00 & 1.00 &
+Elapsed time: 115.503741979599
+Average Elapsed time: 2.31007483959198
+Total distance measure calls: 274334823
+Imported results from file:
+1.00 1.00 &
+Elapsed time: 115.503741979599
+Total distance measure calls: 274334823.0
+0.88 & 1.00 & 1.00 & 1.00 & 0.60 & 0.90 & 0.98 & 1.00 & 0.64 & 0.90 & 0.92 & 1.00 & This notebook was last run end-to-end on: 2026-03-13 14:05:31.337152
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 2 1.75 0
+0.16 & 0.34 & 0.82 & 1.00 & 0.38 & 0.66 & 0.64 & 0.80 & 0.90 & 1.00 & 0.66 & 0.80 & 0.82 & 0.96 & 1.00 & 1.00 &
+Elapsed time: 414.2743513584137
+Average Elapsed time: 8.285487027168275
+Total distance measure calls: 914233016
+Imported results from file:
+1.00 1.00 &
+Elapsed time: 414.2743513584137
+Total distance measure calls: 914233016.0
+0.94 & 1.00 & 1.00 & 1.00 & 0.84 & 0.94 & 1.00 & 1.00 & 0.86 & 0.96 & 0.94 & 1.00 & This notebook was last run end-to-end on: 2026-03-13 14:12:38.176511
+
+(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 2 2.00 0
+0.12 & 0.24 & 0.84 & 0.98 & 0.34 & 0.66 & 0.72 & 0.88 & 0.96 & 1.00 & 0.68 & 0.86 & 0.82 & 0.98 & 1.00 & 1.00 &
+Elapsed time: 751.4093091487885
+Average Elapsed time: 15.02818618297577
+Total distance measure calls: 1565817691
+Imported results from file:
+1.00 1.00 &
+Elapsed time: 751.4093091487885
+Total distance measure calls: 1565817691.0
+0.98 & 1.00 & 1.00 & 1.00 & 0.60 & 0.78 & 0.98 & 1.00 & 0.66 & 0.80 & 0.98 & 1.00 & This notebook was last run end-to-end on: 2026-03-13 14:25:23.788750
