@@ -1,43 +1,43 @@
-(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.25 0
+(ksfdtw) bash-5.1$ python 06_searching_table_3_4.py GunPoint 4 1.25 0 0.0
 0.34 & 0.50 & 0.70 & 0.86 & 0.68 & 0.88 & 0.60 & 0.78 & 0.70 & 0.90 & 0.64 & 0.80 & 0.70 & 0.86 & 0.86 & 0.94 &
-Elapsed time: 14.330138444900513
-Average Elapsed time: 0.28660276889801023
+Elapsed time: 15.052325010299683
+Average Elapsed time: 0.30104650020599366
 Total distance measure calls: 55807524
 Imported results from file:
 0.86 0.94 &
-Elapsed time: 14.330138444900513
+Elapsed time: 15.052325010299683
 Total distance measure calls: 55807524.0
-0.74 & 0.88 & 0.86 & 0.94 & 0.78 & 0.80 & 0.80 & 0.92 & 0.78 & 0.82 & 0.74 & 0.88 & This notebook was last run end-to-end on: 2026-03-13 14:03:24.376542
+0.74 & 0.88 & 0.86 & 0.94 & 0.78 & 0.80 & 0.80 & 0.92 & 0.78 & 0.82 & 0.74 & 0.88 & This notebook was last run end-to-end on: 2026-03-14 15:46:27.363300
 
-(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.50 0
+(ksfdtw) bash-5.1$ python 06_searching_table_3_4.py GunPoint 4 1.50 0 0.0
 0.22 & 0.38 & 0.64 & 0.80 & 0.60 & 0.92 & 0.52 & 0.64 & 0.68 & 0.90 & 0.52 & 0.66 & 0.64 & 0.82 & 0.86 & 0.98 &
-Elapsed time: 171.27714705467224
-Average Elapsed time: 3.425542941093445
+Elapsed time: 177.512925863266
+Average Elapsed time: 3.55025851726532
 Total distance measure calls: 633615865
 Imported results from file:
 0.86 0.98 &
-Elapsed time: 171.27714705467224
+Elapsed time: 177.512925863266
 Total distance measure calls: 633615865.0
-0.72 & 0.84 & 0.86 & 0.98 & 0.68 & 0.84 & 0.84 & 0.96 & 0.66 & 0.84 & 0.72 & 0.86 & This notebook was last run end-to-end on: 2026-03-13 14:06:27.415411
+0.72 & 0.84 & 0.86 & 0.98 & 0.68 & 0.84 & 0.84 & 0.96 & 0.66 & 0.84 & 0.72 & 0.86 & This notebook was last run end-to-end on: 2026-03-14 15:49:36.512645
 
-(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 1.75 0
+(ksfdtw) bash-5.1$ python 06_searching_table_3_4.py GunPoint 4 1.75 0 0.0
 0.16 & 0.30 & 0.72 & 0.92 & 0.56 & 0.80 & 0.60 & 0.78 & 0.56 & 0.80 & 0.56 & 0.80 & 0.70 & 0.88 & 0.92 & 1.00 &
-Elapsed time: 614.7849056720734
-Average Elapsed time: 12.295698113441468
+Elapsed time: 611.9721722602844
+Average Elapsed time: 12.239443445205689
 Total distance measure calls: 2219763530
 Imported results from file:
 0.92 1.00 &
-Elapsed time: 614.7849056720734
+Elapsed time: 611.9721722602844
 Total distance measure calls: 2219763530.0
-0.74 & 0.96 & 0.92 & 1.00 & 0.54 & 0.90 & 0.90 & 1.00 & 0.56 & 0.88 & 0.74 & 0.96 & This notebook was last run end-to-end on: 2026-03-13 14:16:55.542533
+0.74 & 0.96 & 0.92 & 1.00 & 0.54 & 0.90 & 0.90 & 1.00 & 0.56 & 0.88 & 0.74 & 0.96 & This notebook was last run end-to-end on: 2026-03-14 16:00:00.553914
 
-(ksfdtw) bash-5.1$ python 06_searching_tables_3_4.py GunPoint 4 2.00 0
+(ksfdtw) bash-5.1$ python 06_searching_table_3_4.py GunPoint 4 2.00 0 0.0
 0.06 & 0.12 & 0.58 & 0.78 & 0.50 & 0.72 & 0.46 & 0.64 & 0.50 & 0.82 & 0.50 & 0.64 & 0.56 & 0.82 & 0.88 & 0.98 &
-Elapsed time: 1612.784119129181
-Average Elapsed time: 32.255682382583615
+Elapsed time: 1569.3812696933746
+Average Elapsed time: 31.38762539386749
 Total distance measure calls: 5391012077
 Imported results from file:
 0.88 0.98 &
-Elapsed time: 1612.784119129181
+Elapsed time: 1569.3812696933746
 Total distance measure calls: 5391012077.0
-0.66 & 0.90 & 0.88 & 0.98 & 0.58 & 0.82 & 0.88 & 0.98 & 0.62 & 0.80 & 0.66 & 0.90 & This notebook was last run end-to-end on: 2026-03-13 14:44:02.385324
+0.66 & 0.90 & 0.88 & 0.98 & 0.58 & 0.82 & 0.88 & 0.98 & 0.62 & 0.80 & 0.66 & 0.90 & This notebook was last run end-to-end on: 2026-03-14 16:26:23.997990
