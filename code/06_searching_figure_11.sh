@@ -2,9 +2,15 @@
 
 # Configuration
 P_values=(2 3 4)
+# P_values=(2)
 l_values=(1.25 1.50 1.75 2.00)
+# l_values=(1.50)
 dist_methods=(0 1)
-function_used="psdtw_prime_parallel_bsf"
+# dist_methods=(1)
+# function_used="psdtw_prime_parallel_bsf" # 0.96
+function_used="psdtw_prime_parallel_bsf_lb" # 0.94
+# function_used="psdtw_prime_parallel_bsf_lb2" # 0.94
+# function_used="psdtw_prime_parallel_bsf_lb3" # 0.92
 
 echo "Starting experiments for function: $function_used"
 
