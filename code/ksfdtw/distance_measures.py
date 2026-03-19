@@ -501,140 +501,7 @@ def psdtw_prime_parallel_bsf_lb(Q, C, r, l, P, dist_method, bsf=np.inf):
         
     return D[m, n, P], count_dist_calls, cuts
 
-# # Old
-# @njit(parallel=True)
-# def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
-#     # print("psdtw_prime_parallel_bsf_lb2_test")
-#     count_dist_calls = 0
-#     m = len(Q)
-#     n = len(C)
-#     assert m == n, "m should be equal to n"
-    
-#     l_root = math.sqrt(l)
-#     L_Q_gavg = m / P
-#     L_Q_gmin = int(math.ceil(L_Q_gavg / l_root))
-#     L_Q_gmax = int(math.floor(L_Q_gavg * l_root))
-#     L_C_gavg = n / P
-#     L_C_gmin = int(math.ceil(L_C_gavg / l_root))
-#     L_C_gmax = int(math.floor(L_C_gavg * l_root))
-#     L_gmax = max(L_Q_gmax, L_C_gmax)
-
-#     D = np.full((m + 1, n + 1, P + 1), np.inf)
-#     D[0, 0, 0] = 0.0
-#     D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
-
-#     # Outer loop 'p' must remain sequential because it depends on p-1
-#     for p in range(1, P + 1):
-        
-#         # Parallelize the 'i' loop.
-#         for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
-#             # Initialize with correct type (list of sorted float arrays) for Numba inference
-#             cached_windows_sorted = [np.sort(Q[:0])]
-#             cached_r_int = -1
-#             for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
-#                 i_prime = i - L_Q
-#                 if i_prime < 0:
-#                     continue
-#                 Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
-
-#                 L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
-#                 L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
-
-#                 r_int = int(r * max(len(Q_segment), L_C_max))
-
-#                 windows_sorted = []
-#                 # for k in range(1, L_C_max + 1):
-#                 #     idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 # 1-based to 0-based index
-#                 #     idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 # 1-based to 0-based index
-                    
-#                 #     window = Q_segment[idx_start : idx_end + 1] # Inclusive of idx_end
-#                 #     windows_sorted.append(np.sort(window))
-
-#                 if cached_r_int == r_int:
-#                     for k in range(1, L_C_max + 1):
-#                         if k < len(cached_windows_sorted):
-#                             calc_end_1 = math.ceil(k * l) + r_int
-#                             prev_idx_end = int(min(calc_end_1, len(Q_segment) - 1)) - 1
-#                             new_idx_end = int(min(calc_end_1, len(Q_segment))) - 1
-#                             if new_idx_end > prev_idx_end:
-#                                 new_window_sorted = insert_to_sorted(
-#                                     cached_windows_sorted[k],
-#                                     Q_segment[new_idx_end]
-#                                 )
-#                                 windows_sorted.append(new_window_sorted)
-#                             else:
-#                                 windows_sorted.append(cached_windows_sorted[k])
-#                         else:
-#                             idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 # 1-based to 0-based index
-#                             idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 # 1-based to 0-based index
-#                             window = Q_segment[idx_start : idx_end + 1] # Inclusive of idx_end
-#                             windows_sorted.append(np.sort(window))
-#                 else:
-#                     for k in range(1, L_C_max + 1):
-#                         idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 # 1-based to 0-based index
-#                         idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 # 1-based to 0-based index
-#                         window = Q_segment[idx_start : idx_end + 1] # Inclusive of idx_end
-#                         windows_sorted.append(np.sort(window))
-#                 cached_windows_sorted = windows_sorted
-#                 cached_r_int = r_int
-
-#                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
-#                     for L_C in range(L_C_min, L_C_max + 1):
-#                         j_prime = j - L_C
-#                         if j_prime < 0:
-#                             continue
-#                         D_cost = D[i_prime, j_prime, p - 1]
-
-#                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
-                        
-#                         if L_C == L_C_min:
-#                             lb = (Q_segment[0] - C_segment[0]) ** 2
-#                             for k in range(1, L_C):
-#                                 lb += delta(C_segment[k], windows_sorted[k])
-#                         else:
-#                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
-#                         # Use lb with the last point to further tighten the bound
-#                         lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[L_C - 1]) + (Q_segment[-1] - C_segment[-1]) ** 2
-
-#                         if D_cost + lb_check > D[i, j, p]:
-#                             continue
-                        
-#                         if np.isinf(D_cost):
-#                             continue
-#                         if D_cost > bsf:
-#                             continue
-#                         if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
-#                             continue
-                        
-#                         dist_cost = usdtw_prime(
-#                             Q_segment,
-#                             C_segment,
-#                             r=r,
-#                             L=L_gmax, # For upsampling
-#                             dist_method=dist_method,
-#                         )
-                        
-#                         count_dist_calls += 1
-                        
-#                         cur_cost = D_cost + dist_cost
-#                         if cur_cost < D[i, j, p]:
-#                             D[i, j, p] = cur_cost
-#                             D_cut[i, j, p, 0] = i_prime
-#                             D_cut[i, j, p, 1] = j_prime
-
-#     cuts = np.zeros((P, 4), dtype=np.int64)
-#     i, j, p = m, n, P
-#     while p > 0:
-#         i_prime = D_cut[i, j, p, 0]
-#         j_prime = D_cut[i, j, p, 1]
-#         cuts[p - 1, 0] = i_prime
-#         cuts[p - 1, 1] = i
-#         cuts[p - 1, 2] = j_prime
-#         cuts[p - 1, 3] = j
-#         i, j, p = i_prime, j_prime, p - 1
-        
-#     return D[m, n, P], count_dist_calls, cuts
-
+# Original
 @njit(parallel=True)
 def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
     # print("psdtw_prime_parallel_bsf_lb2_test")
@@ -759,9 +626,276 @@ def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
         
     return D[m, n, P], count_dist_calls, cuts
 
+# @njit(parallel=True)
+# def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
+#     # print("psdtw_prime_parallel_bsf_lb2_test")
+#     count_dist_calls = 0
+#     m = len(Q)
+#     n = len(C)
+#     assert m == n, "m should be equal to n"
+    
+#     l_root = math.sqrt(l)
+#     L_Q_gavg = m / P
+#     L_Q_gmin = int(math.ceil(L_Q_gavg / l_root))
+#     L_Q_gmax = int(math.floor(L_Q_gavg * l_root))
+#     L_C_gavg = n / P
+#     L_C_gmin = int(math.ceil(L_C_gavg / l_root))
+#     L_C_gmax = int(math.floor(L_C_gavg * l_root))
+#     L_gmax = max(L_Q_gmax, L_C_gmax)
+
+#     D = np.full((m + 1, n + 1, P + 1), np.inf)
+#     D[0, 0, 0] = 0.0
+#     D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
+
+#     # Outer loop 'p' must remain sequential because it depends on p-1
+#     for p in range(1, P + 1):
+        
+#         # Parallelize the 'i' loop.
+#         for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
+#             cached_r_int = -1
+#             windows_sorted = []
+
+#             for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
+#                 i_prime = i - L_Q
+#                 if i_prime < 0:
+#                     continue
+#                 Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
+
+#                 L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
+#                 L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
+
+#                 r_int = int(r * max(len(Q_segment), L_C_max))
+
+#                 if cached_r_int == r_int:
+#                     for k in range(1, L_C_max + 1):
+#                         if (k - 1) < len(windows_sorted):
+#                             prev_idx_end = int(min(math.floor(k * l) + r_int, L_Q - 1)) - 1
+#                             new_idx_end = int(min(math.floor(k * l) + r_int, L_Q)) - 1
+
+#                             if new_idx_end > prev_idx_end:
+#                                 windows_sorted[k-1] = insert_to_sorted(
+#                                     windows_sorted[k-1],
+#                                     Q_segment[new_idx_end]
+#                                 )
+#                         else:
+#                             # Not computed yet, build from scratch and append
+#                             idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 # 1-based to 0-based index
+#                             idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 # 1-based to 0-based index
+#                             window = Q_segment[idx_start : idx_end + 1] # Inclusive of idx_end
+#                             windows_sorted.append(np.sort(window))
+#                 else:
+#                     # Clear and rebuild if r_int changes
+#                     windows_sorted.clear()
+#                     for k in range(1, L_C_max + 1):
+#                         idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 # 1-based to 0-based index
+#                         idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 # 1-based to 0-based index
+#                         window = Q_segment[idx_start : idx_end + 1] # Inclusive of idx_end
+#                         windows_sorted.append(np.sort(window))
+#                 cached_r_int = r_int
+
+#                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
+#                     lb = 0.0
+#                     is_lb_computed = False
+#                     for L_C in range(L_C_min, L_C_max + 1):
+#                         j_prime = j - L_C
+#                         if j_prime < 0:
+#                             continue
+#                         D_cost = D[i_prime, j_prime, p - 1]
+
+#                         if np.isinf(D_cost):
+#                             continue
+#                         if D_cost > bsf:
+#                             continue
+#                         if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
+#                             continue
+
+#                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
+                        
+#                         if is_lb_computed:
+#                             lb = (Q_segment[0] - C_segment[0]) ** 2
+#                             for k in range(1, L_C):
+#                                 lb += delta(C_segment[k], windows_sorted[k])
+#                             is_lb_computed = True
+#                         else:
+#                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
+#                         # Use lb with the last point to further tighten the bound
+#                         lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[L_C - 1]) + (Q_segment[-1] - C_segment[-1]) ** 2
+
+#                         if D_cost + lb_check > D[i, j, p]:
+#                             continue
+                    
+#                         dist_cost = usdtw_prime(
+#                             Q_segment,
+#                             C_segment,
+#                             r=r,
+#                             L=L_gmax, # For upsampling
+#                             dist_method=dist_method,
+#                         )
+                        
+#                         count_dist_calls += 1
+                        
+#                         cur_cost = D_cost + dist_cost
+#                         if cur_cost < D[i, j, p]:
+#                             D[i, j, p] = cur_cost
+#                             D_cut[i, j, p, 0] = i_prime
+#                             D_cut[i, j, p, 1] = j_prime
+
+#     cuts = np.zeros((P, 4), dtype=np.int64)
+#     i, j, p = m, n, P
+#     while p > 0:
+#         i_prime = D_cut[i, j, p, 0]
+#         j_prime = D_cut[i, j, p, 1]
+#         cuts[p - 1, 0] = i_prime
+#         cuts[p - 1, 1] = i
+#         cuts[p - 1, 2] = j_prime
+#         cuts[p - 1, 3] = j
+#         i, j, p = i_prime, j_prime, p - 1
+        
+#     return D[m, n, P], count_dist_calls, cuts
+
+# # Testing
+# @njit(parallel=True)
+# def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
+#     # print("psdtw_prime_parallel_bsf")
+#     count_dist_calls = 0
+#     m = len(Q)
+#     n = len(C)
+#     assert m == n, "m should be equal to n"
+    
+#     l_root = math.sqrt(l)
+#     L_Q_gavg = m / P
+#     L_Q_gmin = int(math.ceil(L_Q_gavg / l_root))
+#     L_Q_gmax = int(math.floor(L_Q_gavg * l_root))
+#     L_C_gavg = n / P
+#     L_C_gmin = int(math.ceil(L_C_gavg / l_root))
+#     L_C_gmax = int(math.floor(L_C_gavg * l_root))
+#     L_gmax = max(L_Q_gmax, L_C_gmax)
+
+#     D = np.full((m + 1, n + 1, P + 1), np.inf)
+#     D[0, 0, 0] = 0.0
+#     D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
+
+#     # Outer loop 'p' must remain sequential because it depends on p-1
+#     for p in range(1, P + 1):
+        
+#         # Parallelize the 'i' loop.
+#         for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
+#             cached_windows_sorted = [np.empty(0, dtype=Q.dtype)]
+#             cached_windows_sorted.pop()
+#             has_cache = False
+#             cached_r_int = -1
+
+
+#             for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
+#                 i_prime = i - L_Q
+#                 if i_prime < 0:
+#                     continue
+#                 Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
+
+#                 L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
+#                 L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
+
+#                 r_int = int(r * max(len(Q_segment), L_C_max))
+
+#                 windows_sorted = [np.empty(0, dtype=Q.dtype)]
+#                 windows_sorted.pop()
+
+#                 if has_cache and cached_r_int == r_int:
+#                     for k in range(0, L_C_max):
+#                         if k < len(cached_windows_sorted):
+#                             k_1 = k + 1
+#                             calc_end_1 = math.ceil(k_1 * l) + r_int
+#                             prev_idx_end_1 = int(min(calc_end_1, len(Q_segment) - 1))
+#                             new_idx_end_1 = int(min(calc_end_1, len(Q_segment)))
+#                             if new_idx_end_1 > prev_idx_end_1:
+#                                 new_window_sorted = insert_to_sorted(
+#                                     cached_windows_sorted[k],
+#                                     Q_segment[new_idx_end_1 - 1]
+#                                 )
+#                                 windows_sorted.append(new_window_sorted)
+#                             else:
+#                                 windows_sorted.append(cached_windows_sorted[k])
+#                         else:
+#                             k_1 = k + 1
+#                             idx_start_1 = int(max(1, math.ceil(k_1/l)-r_int))
+#                             idx_end_1 = int(min(math.ceil(k_1 * l) + r_int, len(Q_segment)))
+#                             window = Q_segment[idx_start_1-1:idx_end_1-1+1]
+#                             windows_sorted.append(np.sort(window))
+#                 else:
+#                     for k in range(0, L_C_max):
+#                         k_1 = k + 1
+#                         idx_start_1 = int(max(1, math.ceil(k_1/l)-r_int))
+#                         idx_end_1 = int(min(math.ceil(k_1 * l) + r_int, len(Q_segment)))
+#                         window = Q_segment[idx_start_1-1:idx_end_1-1+1]
+#                         windows_sorted.append(np.sort(window))
+#                 cached_windows_sorted = windows_sorted
+#                 has_cache = True
+#                 cached_r_int = r_int
+                    
+#                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
+#                     lb = 0.0
+#                     for L_C in range(L_C_min, L_C_max + 1):
+#                         j_prime = j - L_C
+#                         if j_prime < 0:
+#                             continue
+#                         D_cost = D[i_prime, j_prime, p - 1]
+#                         if np.isinf(D_cost):
+#                             continue
+#                         if D_cost > bsf:
+#                             continue
+#                         if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
+#                             continue
+#                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
+#                         if L_C == L_C_min:
+#                             lb = (Q_segment[0] - C_segment[0]) ** 2
+#                             for k in range(1, L_C):
+#                                 lb += delta(C_segment[k], windows_sorted[k])
+#                         else:
+#                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
+#                         # Use lb with the last point to further tighten the bound
+#                         lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[L_C - 1]) + (Q_segment[-1] - C_segment[-1]) ** 2
+                        
+#                         if lb_check > D[i, j, p]:
+#                             break
+#                         if D_cost + lb_check > D[i, j, p]:
+#                             continue
+
+#                         dist_cost = usdtw_prime(
+#                             Q_segment,
+#                             C_segment,
+#                             r=r,
+#                             L=L_gmax, # For upsampling
+#                             dist_method=dist_method,
+#                         )
+                        
+#                         count_dist_calls += 1
+                        
+#                         cur_cost = D_cost + dist_cost
+#                         if cur_cost < D[i, j, p]:
+#                             D[i, j, p] = cur_cost
+#                             D_cut[i, j, p, 0] = i_prime
+#                             D_cut[i, j, p, 1] = j_prime
+
+#     cuts = np.zeros((P, 4), dtype=np.int64)
+#     i, j, p = m, n, P
+#     while p > 0:
+#         i_prime = D_cut[i, j, p, 0]
+#         j_prime = D_cut[i, j, p, 1]
+#         cuts[p - 1, 0] = i_prime
+#         cuts[p - 1, 1] = i
+#         cuts[p - 1, 2] = j_prime
+#         cuts[p - 1, 3] = j
+#         i, j, p = i_prime, j_prime, p - 1
+        
+#     return D[m, n, P], count_dist_calls, cuts
+
+
+# import math
+# import numpy as np
+# from numba import njit, prange
+
 @njit(parallel=True)
 def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
-    # print("psdtw_prime_parallel_bsf_lb3")
     count_dist_calls = 0
     m = len(Q)
     n = len(C)
@@ -780,34 +914,81 @@ def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
     D[0, 0, 0] = 0.0
     D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
 
-    r_int = int(r * L_gmax)
-
-    windows_sorted = [np.empty(0, dtype=Q.dtype)]
-    windows_sorted.pop()
-
-    for i in range(0, m):
-        i_1 = i + 1
-        idx_start_1 = int(max(1, math.ceil(i_1/l) - r_int))
-        idx_end_1 = int(min(math.ceil(i_1 * l) + r_int, m))
-        window = Q[idx_start_1-1:idx_end_1-1+1]
-        windows_sorted.append(np.sort(window))
-    # print("windows_sorted prepared")
-    # print(len(windows_sorted))
-
+    # --- PRE-ALLOCATION FOR NUMBA ---
+    # We allocate matrix memory outside the parallel loops based on maximum possible sizes.
+    # Dimension 1: (m+1) ensures thread-safety across 'i' in prange.
+    # Dimension 2: Max L_C length.
+    # Dimension 3: Max window length (bounded by L_gmax).
+    windows_matrix = np.zeros((m + 1, L_C_gmax, L_gmax), dtype=Q.dtype)
+    windows_lengths = np.zeros((m + 1, L_C_gmax), dtype=np.int64)
 
     # Outer loop 'p' must remain sequential because it depends on p-1
     for p in range(1, P + 1):
         
         # Parallelize the 'i' loop.
         for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
+            cached_r_int = -1
+            current_max_k = 0 # Tracks the effective "length" of our pre-allocated array
+
             for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
                 i_prime = i - L_Q
                 if i_prime < 0:
                     continue
-                Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
+                Q_segment = Q[i_prime:i][::-1] 
 
                 L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
                 L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
+
+                r_int = int(r * max(len(Q_segment), L_C_max))
+
+                if cached_r_int == r_int:
+                    for k in range(1, L_C_max + 1):
+                        k_idx = k - 1
+                        if k <= current_max_k:
+                            prev_idx_end = int(min(math.floor(k * l) + r_int, L_Q - 1)) - 1
+                            new_idx_end = int(min(math.floor(k * l) + r_int, L_Q)) - 1
+
+                            if new_idx_end > prev_idx_end:
+                                # In-place memory-safe insert instead of insert_to_sorted
+                                val = Q_segment[new_idx_end]
+                                length = windows_lengths[i, k_idx]
+                                windows_matrix[i, k_idx, length] = val
+                                
+                                # Bubble-down to maintain sorted order (O(N) but tiny constant)
+                                curr = length
+                                while curr > 0 and windows_matrix[i, k_idx, curr] < windows_matrix[i, k_idx, curr - 1]:
+                                    temp = windows_matrix[i, k_idx, curr]
+                                    windows_matrix[i, k_idx, curr] = windows_matrix[i, k_idx, curr - 1]
+                                    windows_matrix[i, k_idx, curr - 1] = temp
+                                    curr -= 1
+                                
+                                windows_lengths[i, k_idx] = length + 1
+                        else:
+                            # Not computed yet, build from scratch in pre-allocated array
+                            idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 
+                            idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 
+                            length = idx_end - idx_start + 1
+                            
+                            windows_matrix[i, k_idx, :length] = Q_segment[idx_start : idx_end + 1]
+                            windows_matrix[i, k_idx, :length].sort() # Numba's highly optimized in-place sort
+                            windows_lengths[i, k_idx] = length
+                            
+                    current_max_k = max(current_max_k, L_C_max)
+                else:
+                    # Overwrite existing buffer if r_int changes
+                    current_max_k = 0
+                    for k in range(1, L_C_max + 1):
+                        k_idx = k - 1
+                        idx_start = int(max(1, math.ceil(k / l) - r_int)) - 1 
+                        idx_end = int(min(math.floor(k * l) + r_int, len(Q_segment))) - 1 
+                        length = idx_end - idx_start + 1
+                        
+                        windows_matrix[i, k_idx, :length] = Q_segment[idx_start : idx_end + 1]
+                        windows_matrix[i, k_idx, :length].sort()
+                        windows_lengths[i, k_idx] = length
+                    current_max_k = L_C_max
+                    
+                cached_r_int = r_int
 
                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
                     for L_C in range(L_C_min, L_C_max + 1):
@@ -815,34 +996,36 @@ def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
                         if j_prime < 0:
                             continue
                         D_cost = D[i_prime, j_prime, p - 1]
+
+                        C_segment = C[j_prime:j][::-1] 
+                        
+                        # --- LOWER BOUND CHECK ---
+                        # We pass a 'view' slice of the pre-allocated matrix. This does not allocate memory.
+                        if L_C == L_C_min:
+                            lb = (Q_segment[0] - C_segment[0]) ** 2
+                            for k in range(1, L_C):
+                                lb += delta(C_segment[k], windows_matrix[i, k, :windows_lengths[i, k]])
+                        else:
+                            lb += delta(C_segment[L_C - 1], windows_matrix[i, L_C - 1, :windows_lengths[i, L_C - 1]])
+                            
+                        # Use lb with the last point to further tighten the bound
+                        lb_check = lb - delta(C_segment[L_C - 1], windows_matrix[i, L_C - 1, :windows_lengths[i, L_C - 1]]) + (Q_segment[-1] - C_segment[-1]) ** 2
+
+                        if D_cost + lb_check > D[i, j, p]:
+                            continue
+                        
                         if np.isinf(D_cost):
                             continue
                         if D_cost > bsf:
                             continue
-                        if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
+                        if D_cost > D[i, j, p]: 
                             continue
-                        C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
-                        if L_C == L_C_min:
-                            lb = (Q_segment[0] - C_segment[0]) ** 2
-                            for k in range(1, L_C):
-                                idx_Q = max(0, i - 1 - k)
-                                lb += delta(C_segment[k], windows_sorted[idx_Q])
-                        else:
-                            idx_Q = max(0, i - 1 - (L_C - 1))
-                            lb += delta(C_segment[L_C - 1], windows_sorted[idx_Q])
-                        # Use lb with the last point to further tighten the bound
-                        lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[max(0, i - 1 - (L_C - 1))]) + (Q_segment[-1] - C_segment[-1]) ** 2
-                        if lb_check > D[i, j, p]:
-                            break
-                        if D_cost + lb_check > D[i, j, p]:
-                            continue
-           
                         
                         dist_cost = usdtw_prime(
                             Q_segment,
                             C_segment,
                             r=r,
-                            L=L_gmax, # For upsampling
+                            L=L_gmax, 
                             dist_method=dist_method,
                         )
                         
@@ -866,6 +1049,12 @@ def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
         i, j, p = i_prime, j_prime, p - 1
         
     return D[m, n, P], count_dist_calls, cuts
+
+
+# @njit(parallel=True)
+# def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
+#     # I am a placeholder for further optimization.
+#     return -1
 
 @njit
 def cut_based_distance(Q, C, r, l, P, dist_method, cuts):
