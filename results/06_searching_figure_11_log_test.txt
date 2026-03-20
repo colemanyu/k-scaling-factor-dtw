@@ -1,0 +1,627 @@
+Starting experiments for function: psdtw_prime_parallel_bsf
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 0.6239285469055176
+Average Elapsed time: 0.012478570938110351
+Total distance measure calls: 2992455
+This notebook was last run end-to-end on: 2026-03-20 11:14:00.588481
+
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 8.99474811553955
+Average Elapsed time: 0.17989496231079102
+Total distance measure calls: 4569737
+This notebook was last run end-to-end on: 2026-03-20 11:14:25.198823
+
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 1.610719919204712
+Average Elapsed time: 0.03221439838409424
+Total distance measure calls: 20269442
+This notebook was last run end-to-end on: 2026-03-20 11:14:42.034440
+
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 42.16205859184265
+Average Elapsed time: 0.843241171836853
+Total distance measure calls: 30152958
+This notebook was last run end-to-end on: 2026-03-20 11:15:39.644455
+
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 3.0519156455993652
+Average Elapsed time: 0.0610383129119873
+Total distance measure calls: 56320829
+This notebook was last run end-to-end on: 2026-03-20 11:15:58.566341
+
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 96.15118384361267
+Average Elapsed time: 1.9230236768722535
+Total distance measure calls: 74702661
+This notebook was last run end-to-end on: 2026-03-20 11:17:51.698482
+
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 4.746723890304565
+Average Elapsed time: 0.09493447780609131
+Total distance measure calls: 94576636
+This notebook was last run end-to-end on: 2026-03-20 11:18:12.484600
+
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 191.37009358406067
+Average Elapsed time: 3.8274018716812135
+Total distance measure calls: 128851112
+This notebook was last run end-to-end on: 2026-03-20 11:21:41.436572
+
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 0.7714450359344482
+Average Elapsed time: 0.015428900718688965
+Total distance measure calls: 5267318
+This notebook was last run end-to-end on: 2026-03-20 11:21:58.177824
+
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 7.71703028678894
+Average Elapsed time: 0.15434060573577882
+Total distance measure calls: 8912764
+This notebook was last run end-to-end on: 2026-03-20 11:22:20.982734
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 2.2988829612731934
+Average Elapsed time: 0.04597765922546387
+Total distance measure calls: 51075577
+This notebook was last run end-to-end on: 2026-03-20 11:22:38.806069
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 50.05341696739197
+Average Elapsed time: 1.0010683393478395
+Total distance measure calls: 78233980
+This notebook was last run end-to-end on: 2026-03-20 11:23:44.357701
+
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 4.124527454376221
+Average Elapsed time: 0.08249054908752441
+Total distance measure calls: 143359236
+This notebook was last run end-to-end on: 2026-03-20 11:24:04.575386
+
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 102.36712145805359
+Average Elapsed time: 2.0473424291610716
+Total distance measure calls: 193658179
+This notebook was last run end-to-end on: 2026-03-20 11:26:03.542451
+
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 6.663538455963135
+Average Elapsed time: 0.1332707691192627
+Total distance measure calls: 257631639
+This notebook was last run end-to-end on: 2026-03-20 11:26:26.284952
+
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 210.00902843475342
+Average Elapsed time: 4.200180568695068
+Total distance measure calls: 370697041
+This notebook was last run end-to-end on: 2026-03-20 11:30:13.639546
+
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 0.8241219520568848
+Average Elapsed time: 0.016482439041137695
+Total distance measure calls: 4254284
+This notebook was last run end-to-end on: 2026-03-20 11:30:30.499473
+
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 5.144711017608643
+Average Elapsed time: 0.10289422035217285
+Total distance measure calls: 8000962
+This notebook was last run end-to-end on: 2026-03-20 11:30:50.616002
+
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 1.8443939685821533
+Average Elapsed time: 0.03688787937164307
+Total distance measure calls: 39455107
+This notebook was last run end-to-end on: 2026-03-20 11:31:08.711325
+
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 26.02224087715149
+Average Elapsed time: 0.5204448175430297
+Total distance measure calls: 62192735
+This notebook was last run end-to-end on: 2026-03-20 11:31:50.590349
+
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.92 & 
+Elapsed time: 3.3823134899139404
+Average Elapsed time: 0.06764626979827881
+Total distance measure calls: 125826352
+This notebook was last run end-to-end on: 2026-03-20 11:32:09.469660
+
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.80 & 
+Elapsed time: 59.47625684738159
+Average Elapsed time: 1.1895251369476318
+Total distance measure calls: 165392918
+This notebook was last run end-to-end on: 2026-03-20 11:33:25.114656
+
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 5.9569251537323
+Average Elapsed time: 0.11913850307464599
+Total distance measure calls: 275505504
+This notebook was last run end-to-end on: 2026-03-20 11:33:46.984570
+
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.64 & 
+Elapsed time: 140.39605855941772
+Average Elapsed time: 2.8079211711883545
+Total distance measure calls: 388281917
+This notebook was last run end-to-end on: 2026-03-20 11:36:23.474038
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 1.2428066730499268
+Average Elapsed time: 0.024856133460998533
+Total distance measure calls: 2745307
+This notebook was last run end-to-end on: 2026-03-20 11:36:42.402800
+
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 9.343586683273315
+Average Elapsed time: 0.1868717336654663
+Total distance measure calls: 4159134
+This notebook was last run end-to-end on: 2026-03-20 11:37:08.780682
+
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 2.5310819149017334
+Average Elapsed time: 0.05062163829803467
+Total distance measure calls: 18337625
+This notebook was last run end-to-end on: 2026-03-20 11:37:28.080057
+
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 41.355570554733276
+Average Elapsed time: 0.8271114110946656
+Total distance measure calls: 26379886
+This notebook was last run end-to-end on: 2026-03-20 11:38:27.111255
+
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 4.438567161560059
+Average Elapsed time: 0.08877134323120117
+Total distance measure calls: 50120554
+This notebook was last run end-to-end on: 2026-03-20 11:38:48.203495
+
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 86.34031891822815
+Average Elapsed time: 1.726806378364563
+Total distance measure calls: 64127633
+This notebook was last run end-to-end on: 2026-03-20 11:40:32.583988
+
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 7.018036842346191
+Average Elapsed time: 0.14036073684692382
+Total distance measure calls: 86118445
+This notebook was last run end-to-end on: 2026-03-20 11:40:56.655653
+
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 169.24715375900269
+Average Elapsed time: 3.3849430751800536
+Total distance measure calls: 113769693
+This notebook was last run end-to-end on: 2026-03-20 11:44:04.140010
+
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 1.3256373405456543
+Average Elapsed time: 0.026512746810913087
+Total distance measure calls: 4362352
+This notebook was last run end-to-end on: 2026-03-20 11:44:23.350511
+
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.90 & 
+Elapsed time: 7.256133556365967
+Average Elapsed time: 0.14512267112731933
+Total distance measure calls: 7283503
+This notebook was last run end-to-end on: 2026-03-20 11:44:47.322507
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 3.1180224418640137
+Average Elapsed time: 0.06236044883728027
+Total distance measure calls: 42782095
+This notebook was last run end-to-end on: 2026-03-20 11:45:07.089920
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 43.630024909973145
+Average Elapsed time: 0.8726004981994628
+Total distance measure calls: 66915003
+This notebook was last run end-to-end on: 2026-03-20 11:46:08.325841
+
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 5.641503810882568
+Average Elapsed time: 0.11283007621765137
+Total distance measure calls: 124700827
+This notebook was last run end-to-end on: 2026-03-20 11:46:31.008892
+
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 104.048903465271
+Average Elapsed time: 2.08097806930542
+Total distance measure calls: 165817709
+This notebook was last run end-to-end on: 2026-03-20 11:48:32.560753
+
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 8.785999536514282
+Average Elapsed time: 0.17571999073028566
+Total distance measure calls: 231391218
+This notebook was last run end-to-end on: 2026-03-20 11:48:59.104716
+
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 193.51981663703918
+Average Elapsed time: 3.8703963327407838
+Total distance measure calls: 321253350
+This notebook was last run end-to-end on: 2026-03-20 11:52:31.505969
+
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.84 & 
+Elapsed time: 1.3759379386901855
+Average Elapsed time: 0.02751875877380371
+Total distance measure calls: 3330624
+This notebook was last run end-to-end on: 2026-03-20 11:52:50.586603
+
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 5.1535539627075195
+Average Elapsed time: 0.10307107925415039
+Total distance measure calls: 6349847
+This notebook was last run end-to-end on: 2026-03-20 11:53:12.415034
+
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 2.763157367706299
+Average Elapsed time: 0.05526314735412598
+Total distance measure calls: 31929448
+This notebook was last run end-to-end on: 2026-03-20 11:53:31.783747
+
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 25.49459147453308
+Average Elapsed time: 0.5098918294906616
+Total distance measure calls: 50145489
+This notebook was last run end-to-end on: 2026-03-20 11:54:14.167993
+
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.92 & 
+Elapsed time: 4.616113185882568
+Average Elapsed time: 0.09232226371765137
+Total distance measure calls: 105286372
+This notebook was last run end-to-end on: 2026-03-20 11:54:35.722882
+
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.76 & 
+Elapsed time: 53.870441913604736
+Average Elapsed time: 1.0774088382720948
+Total distance measure calls: 132978712
+This notebook was last run end-to-end on: 2026-03-20 11:55:46.912464
+
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 7.721155643463135
+Average Elapsed time: 0.1544231128692627
+Total distance measure calls: 237694243
+This notebook was last run end-to-end on: 2026-03-20 11:56:11.807506
+
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.64 & 
+Elapsed time: 121.13040804862976
+Average Elapsed time: 2.422608160972595
+Total distance measure calls: 316782521
+This notebook was last run end-to-end on: 2026-03-20 11:58:30.543369
+
+All experiments completed.

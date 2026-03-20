@@ -569,18 +569,32 @@ def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
                 cached_r_int = r_int
 
                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
+                    lb = 0.0
+                    is_lb_initialized = False
                     for L_C in range(L_C_min, L_C_max + 1):
                         j_prime = j - L_C
                         if j_prime < 0:
                             continue
                         D_cost = D[i_prime, j_prime, p - 1]
 
+                        if np.isinf(D_cost):
+                            continue
+                        if D_cost > bsf:
+                            continue
+                        if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
+                            continue
+
                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
                         
-                        if L_C == L_C_min:
-                            lb = (Q_segment[0] - C_segment[0]) ** 2
-                            for k in range(1, L_C):
-                                lb += delta(C_segment[k], windows_sorted[k])
+                        if not is_lb_initialized:
+                            for k in range(0, L_C):
+                                if k == 0:
+                                    lb = (Q_segment[0] - C_segment[0]) ** 2
+                                else:
+                                    lb += delta(C_segment[k], windows_sorted[k])
+                                if lb > D[i, j, p]:
+                                    break
+                            is_lb_initialized = True
                         else:
                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
                         if lb > D[i, j, p]:
@@ -592,12 +606,7 @@ def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
                         if D_cost + lb_check > D[i, j, p]:
                             continue
                         
-                        if np.isinf(D_cost):
-                            continue
-                        if D_cost > bsf:
-                            continue
-                        if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
-                            continue
+                        
                         
                         dist_cost = usdtw_prime(
                             Q_segment,
