@@ -706,9 +706,13 @@ def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
                         
                         if not is_lb_initialized:
-                            lb = (Q_segment[0] - C_segment[0]) ** 2
                             for k in range(1, L_C):
-                                lb += delta(C_segment[k], windows_sorted[k])
+                                if k == 0:
+                                    lb = (Q_segment[0] - C_segment[0]) ** 2
+                                else:
+                                    lb += delta(C_segment[k], windows_sorted[k])
+                                if lb > D[i, j, p]:
+                                    break
                             is_lb_initialized = True
                         else:
                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
