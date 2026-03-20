@@ -1,0 +1,117 @@
+Starting experiments for function: psdtw_prime_parallel_bsf
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 4.486820220947266
+Average Elapsed time: 0.08973640441894531
+Total distance measure calls: 51075577
+This notebook was last run end-to-end on: 2026-03-20 11:51:07.754160
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 87.00739693641663
+Average Elapsed time: 1.7401479387283325
+Total distance measure calls: 78233980
+This notebook was last run end-to-end on: 2026-03-20 11:52:42.245814
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 38.859965801239014
+Average Elapsed time: 0.7771993160247803
+Total distance measure calls: 46548402
+This notebook was last run end-to-end on: 2026-03-20 11:53:30.345823
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 123.09813499450684
+Average Elapsed time: 2.4619626998901367
+Total distance measure calls: 71962487
+This notebook was last run end-to-end on: 2026-03-20 11:55:44.473625
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb2
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 20.61576199531555
+Average Elapsed time: 0.412315239906311
+Total distance measure calls: 46548402
+This notebook was last run end-to-end on: 2026-03-20 11:56:16.040012
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 113.44892477989197
+Average Elapsed time: 2.2689784955978394
+Total distance measure calls: 71962487
+This notebook was last run end-to-end on: 2026-03-20 11:58:21.403821
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 23.260251998901367
+Average Elapsed time: 0.46520503997802737
+Total distance measure calls: 42782039
+This notebook was last run end-to-end on: 2026-03-20 11:58:54.881135
+
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 104.8492259979248
+Average Elapsed time: 2.096984519958496
+Total distance measure calls: 66914847
+This notebook was last run end-to-end on: 2026-03-20 12:00:49.770399
+
+All experiments completed.
