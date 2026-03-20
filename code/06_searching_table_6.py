@@ -61,14 +61,21 @@ else:
     dataset_name = "GunPoint"
 
 if len(sys.argv) > 2:
-    P_target = int(sys.argv[2])
+    P_dataset = int(sys.argv[2])
 else:
-    P_target = 4
+    P_dataset = 4
+
+if len(sys.argv) > 3:
+    P_given = int(sys.argv[3])
+else:
+    P_given = 3
 
 # Target set
 l = 1.50
+P = P_given
+print(f"Dataset: {dataset_name}, P_dataset: {P_dataset}, P_given: {P_given}, l: {l}")
 data = np.load(
-    f"../data_processed/{dataset_name}_P{P_target}_uniform.npz",
+    f"../data_processed/{dataset_name}_P{P_dataset}_uniform.npz",
     allow_pickle=True,
 )
 # Use Train or Test set or Both?
@@ -76,14 +83,9 @@ trans_uniform_concatenated = data["X_train_trans_uniform_concatenated"]
 # trans_uniform_concatenated = data["X_test_trans_uniform_concatenated"]
 # trans_uniform_concatenated = np.concatenate((data["X_train_trans_uniform_concatenated"], data["X_test_trans_uniform_concatenated"]), axis=0)
 
-if len(sys.argv) > 3:
-    P = int(sys.argv[3])
-else:
-    P = 3
-
 # Query set
 data = np.load(
-    f"../data_processed/{dataset_name}_P{P}_l{l:.2f}_random.npz",
+    f"../data_processed/{dataset_name}_P{P_dataset}_l{l:.2f}_random.npz",
     allow_pickle=True,
 )
 # Use Train or Test set or Both?
