@@ -161,4 +161,6 @@ $ tmux kill-server
     https://github.com/lemire/lbimproved
 
     python 06_searching_table_3_4.py GunPoint 3 1.50 0 0.1
+
+    your_command > log.txt
 ```
