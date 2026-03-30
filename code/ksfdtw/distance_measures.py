@@ -606,8 +606,6 @@ def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
                         if D_cost + lb_check > D[i, j, p]:
                             continue
                         
-                        
-                        
                         dist_cost = usdtw_prime(
                             Q_segment,
                             C_segment,
@@ -638,121 +636,121 @@ def psdtw_prime_parallel_bsf_lb2(Q, C, r, l, P, dist_method, bsf=np.inf):
     return D[m, n, P], count_dist_calls, cuts
 
 
-# @njit(parallel=True)
-# def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
-#     # I am a placeholder for further optimization.
-#     return -1
-
-# Original
 @njit(parallel=True)
 def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
-    count_dist_calls = 0
-    m = len(Q)
-    n = len(C)
-    assert m == n, "m should be equal to n"
+    # I am a placeholder for further optimization.
+    return -1
+
+# # Original
+# @njit(parallel=True)
+# def psdtw_prime_parallel_bsf_lb3(Q, C, r, l, P, dist_method, bsf=np.inf):
+#     count_dist_calls = 0
+#     m = len(Q)
+#     n = len(C)
+#     assert m == n, "m should be equal to n"
     
-    l_root = math.sqrt(l)
-    L_Q_gavg = m / P
-    L_Q_gmin = int(math.ceil(L_Q_gavg / l_root))
-    L_Q_gmax = int(math.floor(L_Q_gavg * l_root))
-    L_C_gavg = n / P
-    L_C_gmin = int(math.ceil(L_C_gavg / l_root))
-    L_C_gmax = int(math.floor(L_C_gavg * l_root))
-    L_gmax = max(L_Q_gmax, L_C_gmax)
+#     l_root = math.sqrt(l)
+#     L_Q_gavg = m / P
+#     L_Q_gmin = int(math.ceil(L_Q_gavg / l_root))
+#     L_Q_gmax = int(math.floor(L_Q_gavg * l_root))
+#     L_C_gavg = n / P
+#     L_C_gmin = int(math.ceil(L_C_gavg / l_root))
+#     L_C_gmax = int(math.floor(L_C_gavg * l_root))
+#     L_gmax = max(L_Q_gmax, L_C_gmax)
 
-    D = np.full((m + 1, n + 1, P + 1), np.inf)
-    D[0, 0, 0] = 0.0
-    D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
+#     D = np.full((m + 1, n + 1, P + 1), np.inf)
+#     D[0, 0, 0] = 0.0
+#     D_cut = np.full((m + 1, n + 1, P + 1, 2), -1, dtype=np.int64)
 
-    r_int = int(r * L_gmax)
-    windows_sorted = []
-    for i in range(1, m + 1):
-        idx_start = int(max(1, math.ceil(i/l) - r_int)) - 1
-        idx_end = int(min(math.floor(i * l) + r_int, m)) - 1
-        window = Q[::-1][idx_start:idx_end+1]
-        windows_sorted.append(np.sort(window))
+#     r_int = int(r * L_gmax)
+#     windows_sorted = []
+#     for i in range(1, m + 1):
+#         idx_start = int(max(1, math.ceil(i/l) - r_int)) - 1
+#         idx_end = int(min(math.floor(i * l) + r_int, m)) - 1
+#         window = Q[::-1][idx_start:idx_end+1]
+#         windows_sorted.append(np.sort(window))
 
-    # Outer loop 'p' must remain sequential because it depends on p-1
-    for p in range(1, P + 1):
+#     # Outer loop 'p' must remain sequential because it depends on p-1
+#     for p in range(1, P + 1):
         
-        # Parallelize the 'i' loop.
-        for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
+#         # Parallelize the 'i' loop.
+#         for i in prange(L_Q_gmin * p, min(L_Q_gmax * p, m) + 1):
 
-            for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
-                i_prime = i - L_Q
-                if i_prime < 0:
-                    continue
-                Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
+#             for L_Q in range(L_Q_gmin, L_Q_gmax + 1):
+#                 i_prime = i - L_Q
+#                 if i_prime < 0:
+#                     continue
+#                 Q_segment = Q[i_prime:i][::-1] # |Q_segement| = L_Q
 
-                L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
-                L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
+#                 L_C_min = max(L_C_gmin, int(math.ceil(L_Q / l)))
+#                 L_C_max = min(int(math.floor(L_Q * l)), L_C_gmax)
 
-                for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
-                    lb = 0.0
-                    is_lb_initialized = False
-                    for L_C in range(L_C_min, L_C_max + 1):
-                        j_prime = j - L_C
-                        if j_prime < 0:
-                            continue
-                        D_cost = D[i_prime, j_prime, p - 1]
+#                 for j in range(L_C_gmin * p, min(L_C_gmax * p, n) + 1):
+#                     lb = 0.0
+#                     is_lb_initialized = False
+#                     for L_C in range(L_C_min, L_C_max + 1):
+#                         j_prime = j - L_C
+#                         if j_prime < 0:
+#                             continue
+#                         D_cost = D[i_prime, j_prime, p - 1]
 
-                        if np.isinf(D_cost):
-                            continue
-                        if D_cost > bsf:
-                            continue
-                        if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
-                            continue
+#                         if np.isinf(D_cost):
+#                             continue
+#                         if D_cost > bsf:
+#                             continue
+#                         if D_cost > D[i, j, p]: # D[i][j][p] stores the best_so_far
+#                             continue
 
-                        C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
+#                         C_segment = C[j_prime:j][::-1] # |C_segment| = L_C
                         
-                        if not is_lb_initialized:
-                            for k in range(1, L_C):
-                                if k == 0:
-                                    lb = (Q_segment[0] - C_segment[0]) ** 2
-                                else:
-                                    lb += delta(C_segment[k], windows_sorted[k])
-                                if lb > D[i, j, p]:
-                                    break
-                            is_lb_initialized = True
-                        else:
-                            lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
-                        if lb > D[i, j, p]:
-                            break
+#                         if not is_lb_initialized:
+#                             for k in range(1, L_C):
+#                                 if k == 0:
+#                                     lb = (Q_segment[0] - C_segment[0]) ** 2
+#                                 else:
+#                                     lb += delta(C_segment[k], windows_sorted[k])
+#                                 if lb > D[i, j, p]:
+#                                     break
+#                             is_lb_initialized = True
+#                         else:
+#                             lb += delta(C_segment[L_C - 1], windows_sorted[L_C - 1])
+#                         if lb > D[i, j, p]:
+#                             break
 
-                        # Use lb with the last point to further tighten the bound
-                        lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[L_C - 1]) + (Q_segment[-1] - C_segment[-1]) ** 2
+#                         # Use lb with the last point to further tighten the bound
+#                         lb_check = lb - delta(C_segment[L_C - 1], windows_sorted[L_C - 1]) + (Q_segment[-1] - C_segment[-1]) ** 2
 
-                        if D_cost + lb_check > D[i, j, p]:
-                            continue
+#                         if D_cost + lb_check > D[i, j, p]:
+#                             continue
     
-                        dist_cost = usdtw_prime(
-                            Q_segment,
-                            C_segment,
-                            r=r,
-                            L=L_gmax, # For upsampling
-                            dist_method=dist_method,
-                        )
+#                         dist_cost = usdtw_prime(
+#                             Q_segment,
+#                             C_segment,
+#                             r=r,
+#                             L=L_gmax, # For upsampling
+#                             dist_method=dist_method,
+#                         )
                         
-                        count_dist_calls += 1
+#                         count_dist_calls += 1
                         
-                        cur_cost = D_cost + dist_cost
-                        if cur_cost < D[i, j, p]:
-                            D[i, j, p] = cur_cost
-                            D_cut[i, j, p, 0] = i_prime
-                            D_cut[i, j, p, 1] = j_prime
+#                         cur_cost = D_cost + dist_cost
+#                         if cur_cost < D[i, j, p]:
+#                             D[i, j, p] = cur_cost
+#                             D_cut[i, j, p, 0] = i_prime
+#                             D_cut[i, j, p, 1] = j_prime
 
-    cuts = np.zeros((P, 4), dtype=np.int64)
-    i, j, p = m, n, P
-    while p > 0:
-        i_prime = D_cut[i, j, p, 0]
-        j_prime = D_cut[i, j, p, 1]
-        cuts[p - 1, 0] = i_prime
-        cuts[p - 1, 1] = i
-        cuts[p - 1, 2] = j_prime
-        cuts[p - 1, 3] = j
-        i, j, p = i_prime, j_prime, p - 1
+#     cuts = np.zeros((P, 4), dtype=np.int64)
+#     i, j, p = m, n, P
+#     while p > 0:
+#         i_prime = D_cut[i, j, p, 0]
+#         j_prime = D_cut[i, j, p, 1]
+#         cuts[p - 1, 0] = i_prime
+#         cuts[p - 1, 1] = i
+#         cuts[p - 1, 2] = j_prime
+#         cuts[p - 1, 3] = j
+#         i, j, p = i_prime, j_prime, p - 1
         
-    return D[m, n, P], count_dist_calls, cuts
+#     return D[m, n, P], count_dist_calls, cuts
 
 @njit
 def cut_based_distance(Q, C, r, l, P, dist_method, cuts):
