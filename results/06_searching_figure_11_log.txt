@@ -7,10 +7,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.98 & 
-Elapsed time: 0.6754541397094727
-Average Elapsed time: 0.013509082794189452
+Elapsed time: 0.6261317729949951
+Average Elapsed time: 0.012522635459899902
 Total distance measure calls: 2992455
-This notebook was last run end-to-end on: 2026-03-21 08:27:06.488721
+This notebook was last run end-to-end on: 2026-03-30 21:55:46.224236
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -21,24 +21,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.98 & 
-Elapsed time: 1.3535232543945312
-Average Elapsed time: 0.027070465087890624
+Elapsed time: 1.5113987922668457
+Average Elapsed time: 0.030227975845336916
 Total distance measure calls: 2797205
-This notebook was last run end-to-end on: 2026-03-21 08:27:30.009015
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.25, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.98 & 
-Elapsed time: 1.1681385040283203
-Average Elapsed time: 0.023362770080566406
-Total distance measure calls: 2753780
-This notebook was last run end-to-end on: 2026-03-21 08:27:49.423866
+This notebook was last run end-to-end on: 2026-03-30 21:56:07.617153
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -49,10 +35,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 8.982324600219727
-Average Elapsed time: 0.17964649200439453
+Elapsed time: 9.099053382873535
+Average Elapsed time: 0.1819810676574707
 Total distance measure calls: 4569737
-This notebook was last run end-to-end on: 2026-03-21 08:28:15.414518
+This notebook was last run end-to-end on: 2026-03-30 21:56:32.020792
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -63,24 +49,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 9.242284059524536
-Average Elapsed time: 0.18484568119049072
+Elapsed time: 9.486974716186523
+Average Elapsed time: 0.18973949432373047
 Total distance measure calls: 4156260
-This notebook was last run end-to-end on: 2026-03-21 08:28:47.092658
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.25, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.86 & 
-Elapsed time: 9.021331548690796
-Average Elapsed time: 0.18042663097381592
-Total distance measure calls: 4193127
-This notebook was last run end-to-end on: 2026-03-21 08:29:14.725915
+This notebook was last run end-to-end on: 2026-03-30 21:57:02.084760
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -91,10 +63,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 1.5370829105377197
-Average Elapsed time: 0.030741658210754395
+Elapsed time: 1.6615664958953857
+Average Elapsed time: 0.03323132991790771
 Total distance measure calls: 20269442
-This notebook was last run end-to-end on: 2026-03-21 08:29:33.767433
+This notebook was last run end-to-end on: 2026-03-30 21:57:18.624244
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -105,24 +77,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 3.3911051750183105
-Average Elapsed time: 0.06782210350036622
+Elapsed time: 3.489647388458252
+Average Elapsed time: 0.06979294776916505
 Total distance measure calls: 19110543
-This notebook was last run end-to-end on: 2026-03-21 08:29:58.563533
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.50, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-1.00 & 
-Elapsed time: 2.5452020168304443
-Average Elapsed time: 0.050904040336608884
-Total distance measure calls: 18410215
-This notebook was last run end-to-end on: 2026-03-21 08:30:19.531070
+This notebook was last run end-to-end on: 2026-03-30 21:57:42.080040
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -133,10 +91,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 44.92573142051697
-Average Elapsed time: 0.8985146284103394
+Elapsed time: 44.14728116989136
+Average Elapsed time: 0.8829456233978271
 Total distance measure calls: 30152958
-This notebook was last run end-to-end on: 2026-03-21 08:31:22.388580
+This notebook was last run end-to-end on: 2026-03-30 21:58:42.335723
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -147,24 +105,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 43.662862062454224
-Average Elapsed time: 0.8732572412490844
+Elapsed time: 45.27740406990051
+Average Elapsed time: 0.9055480813980102
 Total distance measure calls: 28058604
-This notebook was last run end-to-end on: 2026-03-21 08:32:28.983646
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.50, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.96 & 
-Elapsed time: 42.745408058166504
-Average Elapsed time: 0.8549081611633301
-Total distance measure calls: 26575463
-This notebook was last run end-to-end on: 2026-03-21 08:33:31.721676
+This notebook was last run end-to-end on: 2026-03-30 21:59:48.481926
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -175,10 +119,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 4.026179790496826
-Average Elapsed time: 0.08052359580993652
+Elapsed time: 3.0505423545837402
+Average Elapsed time: 0.06101084709167481
 Total distance measure calls: 56320829
-This notebook was last run end-to-end on: 2026-03-21 08:33:54.315439
+This notebook was last run end-to-end on: 2026-03-30 22:00:06.827143
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -189,24 +133,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 8.266021490097046
-Average Elapsed time: 0.16532042980194092
+Elapsed time: 6.759829521179199
+Average Elapsed time: 0.13519659042358398
 Total distance measure calls: 53303752
-This notebook was last run end-to-end on: 2026-03-21 08:34:24.287914
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.75, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-1.00 & 
-Elapsed time: 5.268461465835571
-Average Elapsed time: 0.10536922931671143
-Total distance measure calls: 50386322
-This notebook was last run end-to-end on: 2026-03-21 08:34:48.563066
+This notebook was last run end-to-end on: 2026-03-30 22:00:36.778242
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -217,10 +147,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.94 & 
-Elapsed time: 99.09320592880249
-Average Elapsed time: 1.9818641185760497
+Elapsed time: 97.39935994148254
+Average Elapsed time: 1.9479871988296509
 Total distance measure calls: 74702661
-This notebook was last run end-to-end on: 2026-03-21 08:36:47.350385
+This notebook was last run end-to-end on: 2026-03-30 22:02:30.159269
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -231,24 +161,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.94 & 
-Elapsed time: 92.33867287635803
-Average Elapsed time: 1.8467734575271606
+Elapsed time: 92.67178750038147
+Average Elapsed time: 1.8534357500076295
 Total distance measure calls: 70500069
-This notebook was last run end-to-end on: 2026-03-21 08:38:43.174689
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=1.75, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.94 & 
-Elapsed time: 89.67511248588562
-Average Elapsed time: 1.7935022497177124
-Total distance measure calls: 64649484
-This notebook was last run end-to-end on: 2026-03-21 08:40:33.238076
+This notebook was last run end-to-end on: 2026-03-30 22:04:24.380401
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -259,10 +175,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 4.605412006378174
-Average Elapsed time: 0.09210824012756348
+Elapsed time: 5.00692892074585
+Average Elapsed time: 0.100138578414917
 Total distance measure calls: 94576636
-This notebook was last run end-to-end on: 2026-03-21 08:40:55.346054
+This notebook was last run end-to-end on: 2026-03-30 22:04:45.178292
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -273,24 +189,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 10.376680135726929
-Average Elapsed time: 0.20753360271453858
+Elapsed time: 10.327285528182983
+Average Elapsed time: 0.20654571056365967
 Total distance measure calls: 90047349
-This notebook was last run end-to-end on: 2026-03-21 08:41:28.538340
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=2.00, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-1.00 & 
-Elapsed time: 6.9318578243255615
-Average Elapsed time: 0.13863715648651123
-Total distance measure calls: 86615502
-This notebook was last run end-to-end on: 2026-03-21 08:41:54.901795
+This notebook was last run end-to-end on: 2026-03-30 22:05:15.718348
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -301,10 +203,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 186.47276854515076
-Average Elapsed time: 3.729455370903015
+Elapsed time: 164.97315526008606
+Average Elapsed time: 3.2994631052017214
 Total distance measure calls: 128851112
-This notebook was last run end-to-end on: 2026-03-21 08:45:20.311811
+This notebook was last run end-to-end on: 2026-03-30 22:08:17.662022
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -315,24 +217,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 182.72490882873535
-Average Elapsed time: 3.654498176574707
+Elapsed time: 163.63708591461182
+Average Elapsed time: 3.2727417182922363
 Total distance measure calls: 123040644
-This notebook was last run end-to-end on: 2026-03-21 08:48:47.488275
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=2, l=2.00, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.96 & 
-Elapsed time: 173.31213521957397
-Average Elapsed time: 3.4662427043914796
-Total distance measure calls: 114791090
-This notebook was last run end-to-end on: 2026-03-21 08:52:02.085279
+This notebook was last run end-to-end on: 2026-03-30 22:11:24.081365
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -343,10 +231,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.94 & 
-Elapsed time: 0.7611775398254395
-Average Elapsed time: 0.015223550796508788
+Elapsed time: 0.824568510055542
+Average Elapsed time: 0.01649137020111084
 Total distance measure calls: 5267318
-This notebook was last run end-to-end on: 2026-03-21 08:52:20.275516
+This notebook was last run end-to-end on: 2026-03-30 22:11:40.847676
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -357,24 +245,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.94 & 
-Elapsed time: 1.423985481262207
-Average Elapsed time: 0.02847970962524414
+Elapsed time: 1.5256104469299316
+Average Elapsed time: 0.030512208938598632
 Total distance measure calls: 4657765
-This notebook was last run end-to-end on: 2026-03-21 08:52:43.173702
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.25, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.94 & 
-Elapsed time: 1.3314330577850342
-Average Elapsed time: 0.026628661155700683
-Total distance measure calls: 4390402
-This notebook was last run end-to-end on: 2026-03-21 08:53:02.935223
+This notebook was last run end-to-end on: 2026-03-30 22:12:02.336490
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -385,10 +259,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 7.564605951309204
-Average Elapsed time: 0.15129211902618409
+Elapsed time: 7.600781679153442
+Average Elapsed time: 0.15201563358306885
 Total distance measure calls: 8912764
-This notebook was last run end-to-end on: 2026-03-21 08:53:28.067598
+This notebook was last run end-to-end on: 2026-03-30 22:12:25.141378
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -399,24 +273,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 7.344172477722168
-Average Elapsed time: 0.14688344955444335
+Elapsed time: 7.744675636291504
+Average Elapsed time: 0.15489351272583007
 Total distance measure calls: 7954169
-This notebook was last run end-to-end on: 2026-03-21 08:53:56.780027
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.25, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.90 & 
-Elapsed time: 7.604525089263916
-Average Elapsed time: 0.15209050178527833
-Total distance measure calls: 7388062
-This notebook was last run end-to-end on: 2026-03-21 08:54:22.714619
+This notebook was last run end-to-end on: 2026-03-30 22:12:53.282853
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -427,10 +287,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 2.1867244243621826
-Average Elapsed time: 0.04373448848724365
+Elapsed time: 2.261822462081909
+Average Elapsed time: 0.04523644924163819
 Total distance measure calls: 51075577
-This notebook was last run end-to-end on: 2026-03-21 08:54:42.241588
+This notebook was last run end-to-end on: 2026-03-30 22:13:10.580597
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -441,24 +301,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.96 & 
-Elapsed time: 3.6099014282226562
-Average Elapsed time: 0.07219802856445312
+Elapsed time: 3.8633244037628174
+Average Elapsed time: 0.07726648807525635
 Total distance measure calls: 46548642
-This notebook was last run end-to-end on: 2026-03-21 08:55:07.304198
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.50, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.96 & 
-Elapsed time: 3.188920497894287
-Average Elapsed time: 0.06377840995788574
-Total distance measure calls: 43300605
-This notebook was last run end-to-end on: 2026-03-21 08:55:29.480778
+This notebook was last run end-to-end on: 2026-03-30 22:13:34.468831
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -469,10 +315,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 50.3886399269104
-Average Elapsed time: 1.0077727985382081
+Elapsed time: 52.66685199737549
+Average Elapsed time: 1.0533370399475097
 Total distance measure calls: 78233980
-This notebook was last run end-to-end on: 2026-03-21 08:56:37.574248
+This notebook was last run end-to-end on: 2026-03-30 22:14:43.225082
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -483,24 +329,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 48.701847314834595
-Average Elapsed time: 0.9740369462966919
+Elapsed time: 52.46386241912842
+Average Elapsed time: 1.0492772483825683
 Total distance measure calls: 71966267
-This notebook was last run end-to-end on: 2026-03-21 08:57:49.619969
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.50, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.86 & 
-Elapsed time: 50.4004271030426
-Average Elapsed time: 1.008008542060852
-Total distance measure calls: 68188188
-This notebook was last run end-to-end on: 2026-03-21 08:58:59.818929
+This notebook was last run end-to-end on: 2026-03-30 22:15:56.555147
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -511,10 +343,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 4.106770277023315
-Average Elapsed time: 0.0821354055404663
+Elapsed time: 4.207889080047607
+Average Elapsed time: 0.08415778160095215
 Total distance measure calls: 143359236
-This notebook was last run end-to-end on: 2026-03-21 08:59:21.448792
+This notebook was last run end-to-end on: 2026-03-30 22:16:16.861939
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -525,24 +357,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 1.00 & 
-Elapsed time: 6.534566164016724
-Average Elapsed time: 0.13069132328033448
+Elapsed time: 7.003392219543457
+Average Elapsed time: 0.14006784439086914
 Total distance measure calls: 131980106
-This notebook was last run end-to-end on: 2026-03-21 08:59:49.704942
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.75, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-1.00 & 
-Elapsed time: 5.676788806915283
-Average Elapsed time: 0.11353577613830566
-Total distance measure calls: 126107523
-This notebook was last run end-to-end on: 2026-03-21 09:00:13.619318
+This notebook was last run end-to-end on: 2026-03-30 22:16:43.970970
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -553,10 +371,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 103.67875289916992
-Average Elapsed time: 2.0735750579833985
+Elapsed time: 115.09527397155762
+Average Elapsed time: 2.301905479431152
 Total distance measure calls: 193658179
-This notebook was last run end-to-end on: 2026-03-21 09:02:15.824873
+This notebook was last run end-to-end on: 2026-03-30 22:18:55.071024
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -567,24 +385,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 100.92764163017273
-Average Elapsed time: 2.0185528326034547
+Elapsed time: 104.10456323623657
+Average Elapsed time: 2.0820912647247316
 Total distance measure calls: 180478062
-This notebook was last run end-to-end on: 2026-03-21 09:04:20.350305
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=1.75, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.88 & 
-Elapsed time: 95.42522811889648
-Average Elapsed time: 1.9085045623779298
-Total distance measure calls: 169063360
-This notebook was last run end-to-end on: 2026-03-21 09:06:15.952021
+This notebook was last run end-to-end on: 2026-03-30 22:21:01.328759
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -595,10 +399,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.98 & 
-Elapsed time: 6.742572784423828
-Average Elapsed time: 0.13485145568847656
+Elapsed time: 6.710489511489868
+Average Elapsed time: 0.13420979022979737
 Total distance measure calls: 257631639
-This notebook was last run end-to-end on: 2026-03-21 09:06:40.135692
+This notebook was last run end-to-end on: 2026-03-30 22:21:25.179338
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -609,24 +413,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.98 & 
-Elapsed time: 11.035451412200928
-Average Elapsed time: 0.22070902824401856
+Elapsed time: 11.14024305343628
+Average Elapsed time: 0.22280486106872557
 Total distance measure calls: 238938531
-This notebook was last run end-to-end on: 2026-03-21 09:07:12.713452
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=2.00, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.98 & 
-Elapsed time: 8.89426589012146
-Average Elapsed time: 0.1778853178024292
-Total distance measure calls: 233636075
-This notebook was last run end-to-end on: 2026-03-21 09:07:40.661562
+This notebook was last run end-to-end on: 2026-03-30 22:21:58.551468
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -637,10 +427,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 221.480286359787
-Average Elapsed time: 4.42960572719574
+Elapsed time: 211.58256673812866
+Average Elapsed time: 4.2316513347625735
 Total distance measure calls: 370697041
-This notebook was last run end-to-end on: 2026-03-21 09:11:41.295097
+This notebook was last run end-to-end on: 2026-03-30 22:25:47.654448
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -651,24 +441,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 194.56000089645386
-Average Elapsed time: 3.8912000179290773
+Elapsed time: 203.32073616981506
+Average Elapsed time: 4.066414723396301
 Total distance measure calls: 348141022
-This notebook was last run end-to-end on: 2026-03-21 09:15:21.055308
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=3, l=2.00, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.86 & 
-Elapsed time: 189.10646319389343
-Average Elapsed time: 3.7821292638778687
-Total distance measure calls: 326711820
-This notebook was last run end-to-end on: 2026-03-21 09:18:51.659095
+This notebook was last run end-to-end on: 2026-03-30 22:29:34.575742
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -679,10 +455,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 0.8519349098205566
-Average Elapsed time: 0.017038698196411132
+Elapsed time: 0.8903369903564453
+Average Elapsed time: 0.017806739807128907
 Total distance measure calls: 4254284
-This notebook was last run end-to-end on: 2026-03-21 09:19:10.034231
+This notebook was last run end-to-end on: 2026-03-30 22:29:51.524161
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -693,24 +469,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 1.3486084938049316
-Average Elapsed time: 0.026972169876098632
+Elapsed time: 1.4066400527954102
+Average Elapsed time: 0.028132801055908204
 Total distance measure calls: 3681143
-This notebook was last run end-to-end on: 2026-03-21 09:19:33.385591
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.25, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.84 & 
-Elapsed time: 1.331068992614746
-Average Elapsed time: 0.026621379852294923
-Total distance measure calls: 3362599
-This notebook was last run end-to-end on: 2026-03-21 09:19:53.076380
+This notebook was last run end-to-end on: 2026-03-30 22:30:12.875155
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -721,10 +483,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.72 & 
-Elapsed time: 5.181050062179565
-Average Elapsed time: 0.1036210012435913
+Elapsed time: 5.21504545211792
+Average Elapsed time: 0.10430090904235839
 Total distance measure calls: 8000962
-This notebook was last run end-to-end on: 2026-03-21 09:20:15.068722
+This notebook was last run end-to-end on: 2026-03-30 22:30:33.020258
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -735,24 +497,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.72 & 
-Elapsed time: 5.7895331382751465
-Average Elapsed time: 0.11579066276550293
+Elapsed time: 5.642927646636963
+Average Elapsed time: 0.11285855293273926
 Total distance measure calls: 7174046
-This notebook was last run end-to-end on: 2026-03-21 09:20:43.200182
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.25, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.72 & 
-Elapsed time: 5.500355005264282
-Average Elapsed time: 0.11000710010528564
-Total distance measure calls: 6466172
-This notebook was last run end-to-end on: 2026-03-21 09:21:07.283552
+This notebook was last run end-to-end on: 2026-03-30 22:30:58.668536
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -763,10 +511,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 1.8065698146820068
-Average Elapsed time: 0.036131396293640136
+Elapsed time: 1.9532239437103271
+Average Elapsed time: 0.03906447887420654
 Total distance measure calls: 39455107
-This notebook was last run end-to-end on: 2026-03-21 09:21:26.722051
+This notebook was last run end-to-end on: 2026-03-30 22:31:16.010170
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -777,24 +525,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.86 & 
-Elapsed time: 2.809701681137085
-Average Elapsed time: 0.056194033622741696
+Elapsed time: 2.8935558795928955
+Average Elapsed time: 0.05787111759185791
 Total distance measure calls: 34607337
-This notebook was last run end-to-end on: 2026-03-21 09:21:50.875369
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.50, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.86 & 
-Elapsed time: 2.743750810623169
-Average Elapsed time: 0.05487501621246338
-Total distance measure calls: 32544616
-This notebook was last run end-to-end on: 2026-03-21 09:22:11.834051
+This notebook was last run end-to-end on: 2026-03-30 22:31:38.841454
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -805,10 +539,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.72 & 
-Elapsed time: 27.950621128082275
-Average Elapsed time: 0.5590124225616455
+Elapsed time: 27.199931859970093
+Average Elapsed time: 0.5439986371994019
 Total distance measure calls: 62192735
-This notebook was last run end-to-end on: 2026-03-21 09:22:57.450410
+This notebook was last run end-to-end on: 2026-03-30 22:32:21.264634
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -819,24 +553,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.72 & 
-Elapsed time: 26.34593439102173
-Average Elapsed time: 0.5269186878204346
+Elapsed time: 25.948030710220337
+Average Elapsed time: 0.5189606142044068
 Total distance measure calls: 55683047
-This notebook was last run end-to-end on: 2026-03-21 09:23:45.622922
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.50, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.72 & 
-Elapsed time: 24.8880774974823
-Average Elapsed time: 0.497761549949646
-Total distance measure calls: 51574598
-This notebook was last run end-to-end on: 2026-03-21 09:24:30.082622
+This notebook was last run end-to-end on: 2026-03-30 22:33:07.783990
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -847,10 +567,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.92 & 
-Elapsed time: 3.4312939643859863
-Average Elapsed time: 0.06862587928771972
+Elapsed time: 3.421834707260132
+Average Elapsed time: 0.06843669414520263
 Total distance measure calls: 125826352
-This notebook was last run end-to-end on: 2026-03-21 09:24:50.707053
+This notebook was last run end-to-end on: 2026-03-30 22:33:26.914445
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -861,24 +581,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.92 & 
-Elapsed time: 5.338500738143921
-Average Elapsed time: 0.10677001476287842
+Elapsed time: 5.5307252407073975
+Average Elapsed time: 0.11061450481414795
 Total distance measure calls: 111990633
-This notebook was last run end-to-end on: 2026-03-21 09:25:18.102340
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.75, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.92 & 
-Elapsed time: 4.799775123596191
-Average Elapsed time: 0.09599550247192383
-Total distance measure calls: 107211334
-This notebook was last run end-to-end on: 2026-03-21 09:25:41.752896
+This notebook was last run end-to-end on: 2026-03-30 22:33:52.872719
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -889,10 +595,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.80 & 
-Elapsed time: 63.95472574234009
-Average Elapsed time: 1.2790945148468018
+Elapsed time: 61.091487407684326
+Average Elapsed time: 1.2218297481536866
 Total distance measure calls: 165392918
-This notebook was last run end-to-end on: 2026-03-21 09:27:02.877775
+This notebook was last run end-to-end on: 2026-03-30 22:35:09.723022
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -903,24 +609,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.80 & 
-Elapsed time: 60.85458946228027
-Average Elapsed time: 1.2170917892456055
+Elapsed time: 58.54298424720764
+Average Elapsed time: 1.1708596849441528
 Total distance measure calls: 150059956
-This notebook was last run end-to-end on: 2026-03-21 09:28:26.948937
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=1.75, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.76 & 
-Elapsed time: 54.53626346588135
-Average Elapsed time: 1.090725269317627
-Total distance measure calls: 136566613
-This notebook was last run end-to-end on: 2026-03-21 09:29:41.579256
+This notebook was last run end-to-end on: 2026-03-30 22:36:29.311683
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -931,10 +623,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 6.291259288787842
-Average Elapsed time: 0.12582518577575683
+Elapsed time: 6.211573362350464
+Average Elapsed time: 0.12423146724700927
 Total distance measure calls: 275505504
-This notebook was last run end-to-end on: 2026-03-21 09:30:05.392523
+This notebook was last run end-to-end on: 2026-03-30 22:36:51.614219
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -945,24 +637,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.88 & 
-Elapsed time: 9.251144170761108
-Average Elapsed time: 0.18502288341522216
+Elapsed time: 9.77782130241394
+Average Elapsed time: 0.1955564260482788
 Total distance measure calls: 251633284
-This notebook was last run end-to-end on: 2026-03-21 09:30:36.782174
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=2.00, dist_method=0
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.88 & 
-Elapsed time: 7.913499355316162
-Average Elapsed time: 0.15826998710632323
-Total distance measure calls: 241275366
-This notebook was last run end-to-end on: 2026-03-21 09:31:03.006561
+This notebook was last run end-to-end on: 2026-03-30 22:37:21.488899
 
 Starting experiments for function: psdtw_prime_parallel_bsf
 --------------------------------------------------
@@ -973,10 +651,10 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.64 & 
-Elapsed time: 141.59611821174622
-Average Elapsed time: 2.8319223642349245
+Elapsed time: 131.82073783874512
+Average Elapsed time: 2.6364147567749026
 Total distance measure calls: 388281917
-This notebook was last run end-to-end on: 2026-03-21 09:33:43.256130
+This notebook was last run end-to-end on: 2026-03-30 22:39:49.482105
 
 Starting experiments for function: psdtw_prime_parallel_bsf_lb2
 --------------------------------------------------
@@ -987,23 +665,9 @@ Starting nearest neighbor search over the entire query set...
 GunPoint
 
 0.64 & 
-Elapsed time: 134.68576788902283
-Average Elapsed time: 2.6937153577804565
+Elapsed time: 130.27092361450195
+Average Elapsed time: 2.605418472290039
 Total distance measure calls: 358248378
-This notebook was last run end-to-end on: 2026-03-21 09:36:21.490210
-
-Starting experiments for function: psdtw_prime_parallel_bsf_lb3
---------------------------------------------------
-Running with P=4, l=2.00, dist_method=1
-Shuffled.
-New shape: (50, 151)
-Starting nearest neighbor search over the entire query set...
-GunPoint
-
-0.64 & 
-Elapsed time: 120.05740642547607
-Average Elapsed time: 2.4011481285095213
-Total distance measure calls: 324213547
-This notebook was last run end-to-end on: 2026-03-21 09:38:41.781269
+This notebook was last run end-to-end on: 2026-03-30 22:42:21.843365
 
 All experiments completed.
