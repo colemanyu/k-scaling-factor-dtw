@@ -6,7 +6,7 @@ P_values=(2 3 4)
 l_values=(1.25 1.50 1.75 2.00)
 # l_values=(1.50)
 dist_methods=(0 1)
-# functions_to_run=("psdtw_prime_parallel_bsf" "psdtw_prime_parallel_bsf_lb" "psd1_prime_parallel_bsf_lb3")
+# functions_to_run=("psdtw_prime_parallel_bsf" "psdtw_prime_parallel_bsf_lb" "psdtw_prime_parallel_bsf_lb2" "psdtw_prime_parallel_bsf_lb3")
 functions_to_run=("psdtw_prime_parallel_bsf_lb3")
 
 for P in "${P_values[@]}"; do

@@ -1,0 +1,384 @@
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 3.393580198287964
+Average Elapsed time: 0.06787160396575928
+Total distance measure calls: 2955346
+Total LB elapsed time: 0.009796619415283203
+This notebook was last run end-to-end on: 2026-04-04 17:08:10.994814
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 14.430806875228882
+Average Elapsed time: 0.28861613750457765
+Total distance measure calls: 4144080
+Total LB elapsed time: 0.011817216873168945
+This notebook was last run end-to-end on: 2026-04-04 17:08:33.665209
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 5.975662708282471
+Average Elapsed time: 0.11951325416564941
+Total distance measure calls: 20031202
+Total LB elapsed time: 0.01192927360534668
+This notebook was last run end-to-end on: 2026-04-04 17:08:47.651364
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 99.66494083404541
+Average Elapsed time: 1.9932988166809082
+Total distance measure calls: 29169777
+Total LB elapsed time: 0.015430212020874023
+This notebook was last run end-to-end on: 2026-04-04 17:10:36.695662
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 12.532490968704224
+Average Elapsed time: 0.2506498193740845
+Total distance measure calls: 55592625
+Total LB elapsed time: 0.014430761337280273
+This notebook was last run end-to-end on: 2026-04-04 17:10:57.809275
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 269.5047287940979
+Average Elapsed time: 5.390094575881958
+Total distance measure calls: 72757621
+Total LB elapsed time: 0.020763635635375977
+This notebook was last run end-to-end on: 2026-04-04 17:15:38.540037
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 21.887903928756714
+Average Elapsed time: 0.43775807857513427
+Total distance measure calls: 93372888
+Total LB elapsed time: 0.015517711639404297
+This notebook was last run end-to-end on: 2026-04-04 17:16:09.633862
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=2, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 565.0475351810455
+Average Elapsed time: 11.300950703620911
+Total distance measure calls: 126031699
+Total LB elapsed time: 0.019708871841430664
+This notebook was last run end-to-end on: 2026-04-04 17:25:49.980331
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.94 & 
+Elapsed time: 3.7252590656280518
+Average Elapsed time: 0.07450518131256104
+Total distance measure calls: 5193407
+Total LB elapsed time: 0.010146856307983398
+This notebook was last run end-to-end on: 2026-04-04 17:26:02.603163
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 13.499490976333618
+Average Elapsed time: 0.26998981952667234
+Total distance measure calls: 8487001
+Total LB elapsed time: 0.011275291442871094
+This notebook was last run end-to-end on: 2026-04-04 17:26:24.734061
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.96 & 
+Elapsed time: 8.805898189544678
+Average Elapsed time: 0.17611796379089356
+Total distance measure calls: 50279932
+Total LB elapsed time: 0.013056278228759766
+This notebook was last run end-to-end on: 2026-04-04 17:26:42.248837
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 108.88383913040161
+Average Elapsed time: 2.177676782608032
+Total distance measure calls: 75580833
+Total LB elapsed time: 0.016075611114501953
+This notebook was last run end-to-end on: 2026-04-04 17:28:40.816734
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+1.00 & 
+Elapsed time: 17.851924180984497
+Average Elapsed time: 0.35703848361968993
+Total distance measure calls: 140817023
+Total LB elapsed time: 0.014914274215698242
+This notebook was last run end-to-end on: 2026-04-04 17:29:07.639150
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 240.60552620887756
+Average Elapsed time: 4.812110524177552
+Total distance measure calls: 187535546
+Total LB elapsed time: 0.01665353775024414
+This notebook was last run end-to-end on: 2026-04-04 17:33:18.246794
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.98 & 
+Elapsed time: 28.12308692932129
+Average Elapsed time: 0.5624617385864258
+Total distance measure calls: 252959849
+Total LB elapsed time: 0.015597820281982422
+This notebook was last run end-to-end on: 2026-04-04 17:33:54.366266
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=3, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 586.1371088027954
+Average Elapsed time: 11.722742176055908
+Total distance measure calls: 359518121
+Total LB elapsed time: 0.020893335342407227
+This notebook was last run end-to-end on: 2026-04-04 17:43:54.813109
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 3.541837215423584
+Average Elapsed time: 0.07083674430847169
+Total distance measure calls: 4167272
+Total LB elapsed time: 0.009540319442749023
+This notebook was last run end-to-end on: 2026-04-04 17:44:06.017875
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.25, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 7.952765941619873
+Average Elapsed time: 0.15905531883239746
+Total distance measure calls: 7632157
+Total LB elapsed time: 0.010773420333862305
+This notebook was last run end-to-end on: 2026-04-04 17:44:22.663586
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.86 & 
+Elapsed time: 6.327209949493408
+Average Elapsed time: 0.12654419898986816
+Total distance measure calls: 38473783
+Total LB elapsed time: 0.01297616958618164
+This notebook was last run end-to-end on: 2026-04-04 17:44:36.331910
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.50, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.72 & 
+Elapsed time: 43.72418999671936
+Average Elapsed time: 0.8744837999343872
+Total distance measure calls: 59390226
+Total LB elapsed time: 0.014858245849609375
+This notebook was last run end-to-end on: 2026-04-04 17:45:27.825229
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.92 & 
+Elapsed time: 13.380370855331421
+Average Elapsed time: 0.26760741710662844
+Total distance measure calls: 122489169
+Total LB elapsed time: 0.01526641845703125
+This notebook was last run end-to-end on: 2026-04-04 17:45:48.685423
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=1.75, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.80 & 
+Elapsed time: 128.00798392295837
+Average Elapsed time: 2.5601596784591676
+Total distance measure calls: 158439578
+Total LB elapsed time: 0.01606607437133789
+This notebook was last run end-to-end on: 2026-04-04 17:48:05.382167
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=0
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.88 & 
+Elapsed time: 28.468919038772583
+Average Elapsed time: 0.5693783807754517
+Total distance measure calls: 267801995
+Total LB elapsed time: 0.016810894012451172
+This notebook was last run end-to-end on: 2026-04-04 17:48:42.482690
+
+Starting experiments for function: psdtw_prime_parallel_bsf_lb3
+--------------------------------------------------
+Running with P=4, l=2.00, dist_method=1
+Shuffled.
+New shape: (50, 151)
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Starting nearest neighbor search over the entire query set...
+GunPoint
+
+0.64 & 
+Elapsed time: 361.7664189338684
+Average Elapsed time: 7.2353283786773686
+Total distance measure calls: 371863314
+Total LB elapsed time: 0.019747257232666016
+This notebook was last run end-to-end on: 2026-04-04 17:54:54.762457
+
+All experiments completed.

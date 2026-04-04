@@ -1,3 +1,5 @@
+import time
+
 import numpy as np
 import math
 from numba import njit
@@ -65,7 +67,7 @@ def construct_sorted_windows(Q, C, r, l, L_gmax):
         windows_sorted.append(np.sort(window))
     return windows_sorted
 
-@njit
+# @njit
 def nearest_neighbor_search_lb3(Q, dataset, r, l, P, dist_method, dist_func):
     """
     query: shape (m,)
@@ -86,8 +88,11 @@ def nearest_neighbor_search_lb3(Q, dataset, r, l, P, dist_method, dist_func):
     # L_C_gmin = int(math.ceil(L_C_gavg / l_root))
     L_C_gmax = int(math.floor(L_C_gavg * l_root))
     L_gmax = max(L_Q_gmax, L_C_gmax)
-
+    
+    start = time.time()
     sorted_windows = construct_sorted_windows(Q, dataset[0], r, l, L_gmax)
+    end = time.time()
+    elapsed_time = end - start
     
     for k in range(len(dataset)):
         candidate = dataset[k]
@@ -103,4 +108,4 @@ def nearest_neighbor_search_lb3(Q, dataset, r, l, P, dist_method, dist_func):
             best_idx = k
             # print(f"New best found at index {k}: {bsf}")
             
-    return best_idx, bsf, total_dist_calls
+    return best_idx, bsf, total_dist_calls, elapsed_time

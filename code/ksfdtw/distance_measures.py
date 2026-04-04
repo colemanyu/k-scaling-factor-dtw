@@ -348,8 +348,39 @@ def psdtw_prime_parallel_bsf(Q, C, r, l, P, dist_method, bsf=np.inf):
         
     return D[m, n, P], count_dist_calls, cuts
 
-@njit
+
+# Added compiler directives for maximum speed
+@njit(fastmath=True, boundscheck=False, cache=True)
 def delta(d, window_sorted):
+    """
+    Calculates the squared distance between d and the closest point in window_sorted.
+    Assumes window_sorted is a non-empty, sorted numpy array.
+    """
+    # Fast boundary checks
+    if d <= window_sorted[0]:
+        diff = d - window_sorted[0]
+        return diff * diff
+    
+    if d > window_sorted[-1]:
+        diff = d - window_sorted[-1]
+        return diff * diff
+
+    # Binary search
+    idx = np.searchsorted(window_sorted, d)
+    
+    # Mathematical optimization: 
+    # Calculate the positive differences to the left and right neighbors
+    diff1 = window_sorted[idx] - d
+    diff2 = d - window_sorted[idx - 1]
+    
+    # Find the smaller difference using a simple ternary (often compiles to a branchless CSEL instruction)
+    best_diff = diff1 if diff1 < diff2 else diff2
+    
+    # Square only once
+    return best_diff * best_diff
+
+@njit
+def delta_old(d, window_sorted):
     """
     Parameters
     ----------

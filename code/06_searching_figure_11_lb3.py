@@ -422,14 +422,15 @@ elapsed_time = end - start
 print("Starting nearest neighbor search over the entire query set...")
 print(dataset_name)
 all_count_dist_calls = []
+all_lb_elapsed_times = []
 start = time.time()
 precision_at_1 = 0
 for i in range(0, len(query_set)):
     query_vec = query_set[i][:-1]
     target_vecs = target_set[:, :-1]
-    best_idx, bsf, total_dist_calls = nearest_neighbor_search_lb3(query_vec, target_vecs, r=r, l=l,  P=P, dist_method=dist_method, dist_func=function_used)
+    best_idx, bsf, total_dist_calls, lb_elapsed_time = nearest_neighbor_search_lb3(query_vec, target_vecs, r=r, l=l,  P=P, dist_method=dist_method, dist_func=function_used)
     all_count_dist_calls.append(total_dist_calls)
-    
+    all_lb_elapsed_times.append(lb_elapsed_time)
     # Check correctness using index
     if target_set[best_idx, -1] == query_set[i, -1]:
         precision_at_1 += 1
@@ -448,7 +449,9 @@ print("Average Elapsed time: " + str(elapsed_time / len(query_set)))
 total_count_dist_calls = 0
 for r in all_count_dist_calls:
     total_count_dist_calls += np.sum(r)
+total_lb_elapsed_time = np.sum(all_lb_elapsed_times)
 print("Total distance measure calls: " + str(total_count_dist_calls))
+print("Total LB elapsed time: " + str(total_lb_elapsed_time))
 new_elapsed_time = elapsed_time
 new_total_count_dist_calls = total_count_dist_calls
 
